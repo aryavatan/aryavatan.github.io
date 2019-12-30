@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Kulim+Park|Roboto|Roboto+Condensed&display=swap');
+
+$primary:rgb(30, 242, 107);
+$secondary: rgb(29, 31, 32);
+
+body {
+    margin: 0;
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 18px;
+    background-color: $secondary;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: $secondary;
+    padding: 1em 0;
+
+    a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    a.logo {
+        font-weight: bold;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 200%;
+        color: $primary;
+    }
+
+    nav {
+        float: right;
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            display: flex;
+
+            li a {
+                padding: 1em;
+
+                &:hover {
+                    background: darken($primary, 10%);
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+h1 {
+    margin-top: 2em;
+}
