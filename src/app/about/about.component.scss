@@ -1,4 +1,4 @@
-
+$primary:rgb(152, 230, 152);
 
 img {
     width: auto;
@@ -9,5 +9,59 @@ img {
     margin-top: 2em;
 }
 
+p, li {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    color: white;
+}
 
-  
+h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: $primary;
+}
+
+p {
+    margin-left: 1em;
+}
+
+#profile{
+    //margin-left: 1em;
+    width: auto;
+    max-width: 50%;
+}
+
+#skills > ul {
+	list-style-type: none;
+    margin: 0;
+    margin-left: 1em;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        background: $primary;
+        padding: 1em;
+        margin-right: 10px;
+        width: auto;
+        height: auto;
+        margin-bottom: 1em;
+        display: flex;
+        flex-direction: column;
+        color: black;
+    }
+
+    li:hover{
+        background: darken($primary, 26%);
+    }
+}
+
+#awards > ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 1em;
+
+    li{
+        padding-bottom: 1em;
+        padding-left: 0;
+    }
+}
