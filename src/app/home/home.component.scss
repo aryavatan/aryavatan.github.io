@@ -1,13 +1,19 @@
 //$primary:rgb(30, 242, 107);
 $primary:rgb(152, 230, 152);
 
-img {
-    border-radius: 8px;
+#image {
+    height: 70%;
+}
 
+img {
+    object-fit: cover;
+    overflow: hidden;
+    // object-position: 20% 0px; 
     width: auto;
     height: auto;
     max-width: 90%;
     max-height: 90%;
+    border-radius: 8px;
 }
 
 div#text{
@@ -46,4 +52,28 @@ div#text{
     content: "";
     clear: both;
     display: table;
+}
+
+#skills > ul {
+	list-style-type: none;
+    margin-top: 3em;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        background: $primary;
+        padding: 1em;
+        margin-right: 10px;
+        width: auto;
+        height: auto;
+        margin-bottom: 1em;
+        display: flex;
+        flex-direction: column;
+        color: black;
+    }
+
+    li:hover{
+        background: darken($primary, 26%);
+    }
 }
