@@ -18,8 +18,8 @@ $dot-diameter: 8px;
         content: '';
         position: absolute;
         top: 30px;
-        left:calc(33% + 15px); //$gutter/2
-        bottom: 30px;
+        left:calc(33% + 15px); 
+        bottom: 0px;
         width: $border-width;
         background: white;
     }
@@ -68,7 +68,7 @@ $dot-diameter: 8px;
         }
     }
     .body {
-        margin: 0 0 4em;
+        margin: 0 0 3em;
         float: right;
         width: 62%;
         padding-left: $gutter;
@@ -82,13 +82,12 @@ $dot-diameter: 8px;
             font-family: 'Roboto Condensed', sans-serif;
         }
         ul {
-            font-family: 'Roboto', sans-serif;    
+            font-family: 'Roboto Condensed', sans-serif;    
             color:#aaa;
-            padding-left: 0;
-            list-style-type: none;
-            li:before {
-                content: "–";
-                margin-right: .5em;
+            padding-left: 2em;
+            list-style-type: disc;
+            li {
+                padding-bottom: 6px;
             }
         }
     }
