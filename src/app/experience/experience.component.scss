@@ -9,86 +9,87 @@ $border-width: 4px;
 $dot-diameter: 8px;
 
 .timeline {
-  width:1000px;
-  max-width: 1000px;
-  background:$secondary;
-  padding: 100px 50px;
-  position: relative;
-  &:before {
-    content: '';
-    position: absolute;
-    top: 30px;
-    left:calc(33% + 15px); //$gutter/2
-    bottom: 30px;
-    width: $border-width;
-    background: white;
-  }
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  } 
+    width:1000px;
+    max-width: 1000px;
+    background:$secondary;
+    padding: 100px 50px;
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 30px;
+        left:calc(33% + 15px); //$gutter/2
+        bottom: 30px;
+        width: $border-width;
+        background: white;
+    }
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    } 
 }
 
 .entry {
-  clear: both;
-  text-align: left;
-  position: relative;
-  .title {
-    margin-bottom: .5em;
-    float: left;
-    width: 28%;
-    // left:calc(-3%); //$gutter/2
-    padding-right: $gutter;
-    text-align: right;
+    clear: both;
+    text-align: left;
     position: relative;
-    &:before {
-      content: '';
-      position: absolute;
-      width: $dot-diameter;
-      height: $dot-diameter;
-      border: $border-width solid $primary;
-      background-color: $secondary;
-      border-radius:100%;
-      top: 15%;
-      right: -$dot-diameter;
-      z-index: 99;
+    .title {
+        margin-bottom: .5em;
+        float: left;
+        width: 28%;
+        // left:calc(-3%); //$gutter/2
+        padding-right: $gutter;
+        text-align: right;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            width: $dot-diameter;
+            height: $dot-diameter;
+            border: $border-width solid $primary;
+            background-color: $secondary;
+            border-radius:100%;
+            top: 15%;
+            right: -$dot-diameter;
+            z-index: 99;
+        }
+        h3 {
+            margin: 0;
+            font-size: 120%;
+            color: $primary;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        p {
+            margin: 0;
+            font-size: 100%;
+            color: white;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
     }
-    h3 {
-      margin: 0;
-      font-size: 120%;
-      color: $primary;
-      font-family: 'Roboto Condensed', sans-serif;
+    .body {
+        margin: 0 0 4em;
+        float: right;
+        width: 62%;
+        padding-left: $gutter;
+        p {
+            line-height: 1.4em;
+            &:first-child {
+                margin-top: 0;
+                font-weight: 400;
+            }
+            color: white;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+        ul {
+            font-family: 'Roboto', sans-serif;    
+            color:#aaa;
+            padding-left: 0;
+            list-style-type: none;
+            li:before {
+                content: "–";
+                margin-right: .5em;
+            }
+        }
     }
-    p {
-      margin: 0;
-      font-size: 100%;
-      color: white;
-      font-family: 'Roboto Condensed', sans-serif;
-    }
-  }
-  .body {
-    margin: 0 0 4em;
-    float: right;
-    width: 62%;
-    padding-left: $gutter;
-    p {
-      line-height: 1.4em;
-      &:first-child {
-        margin-top: 0;
-        font-weight: 400;
-      }
-      color: white;
-      font-family: 'Roboto Condensed', sans-serif;
-    }
-    ul {
-      color:#aaa;
-      padding-left: 0;
-      list-style-type: none;
-      li:before {
-        content: "–";
-        margin-right: .5em;
-      }
-    }
-  }
 }
