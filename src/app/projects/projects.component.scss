@@ -1,0 +1,14 @@
+$primary:rgb(152, 230, 152);
+$secondary: rgb(29, 31, 32);
+
+p {
+    color: white;
+}
+
+a {
+    text-decoration-color: $primary;
+}
+
+span {
+    color: $primary;
+}
