@@ -48,10 +48,12 @@ p {
         display: flex;
         flex-direction: column;
         color: black;
+        border-radius: 8px;
     }
 
     li:hover{
-        background: darken($primary, 26%);
+        background: darken($primary, 25%);
+        font-weight: bolder;
     }
 }
 
