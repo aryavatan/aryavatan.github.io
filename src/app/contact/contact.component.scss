@@ -9,6 +9,21 @@ p {
     color: white;
 }
 
+p#main-text {
+    // margin-left: 2em;
+}
+
+.table {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+
+h3 {
+    color: $primary;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 155%;
+}
+
 ul {
 	list-style-type: none;
     margin: 0;
@@ -22,16 +37,18 @@ ul {
     }
 
     li {
-        // background: $primary;
         padding: 1em;
         margin-right: 20px;
-        width: auto;
+        width: 200px;
         height: auto;
         margin-bottom: 1em;
         display: flex;
         flex-direction: column;
         text-align: center;
         align-items: center;
+        border: solid;
+        border-width: 2px;
+        border-color: #aaa;
         border-radius: 10px;
         overflow: hidden;
 
@@ -51,5 +68,6 @@ ul {
 
     li:hover{
         background: lighten($secondary, 10%);
+        border-color: $primary;
     }
 }
