@@ -11,18 +11,8 @@
         <p>I'm here to write code and chew bubble gum, And I'm all out of bubble gum...</p>
 
         <div id="skills">
-            <ul>
-                <li>Java</li>
-                <li>C#</li>
-                <li>JavaScript</li>
-                <li>Python</li>
-                <li>C++</li>
-                <li>SQL</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Node.js</li>
-                <li>React</li>
-                <li>Angular</li>
+            <ul *ngIf="skills">
+                <li *ngFor="let skill of skills">{{ skill }}</li>
             </ul>
         </div>
 
