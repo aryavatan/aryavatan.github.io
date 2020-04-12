@@ -11,5 +11,10 @@
         "Node.js",
         "React",
         "Angular"
+    ],
+    "projects":[
+        {
+            "name":"TestProject1"
+        }
     ]
 }

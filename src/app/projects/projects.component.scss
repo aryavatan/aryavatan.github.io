@@ -1,14 +1,21 @@
 $primary:rgb(152, 230, 152);
 $secondary: rgb(29, 31, 32);
 
-p {
-    color: white;
-}
-
 a {
     text-decoration-color: $primary;
 }
 
 span {
+    color: $primary;
+}
+
+p, li {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+h1, h2 {
+    font-family: 'Roboto Condensed', sans-serif;
     color: $primary;
 }
