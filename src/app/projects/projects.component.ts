@@ -17,4 +17,8 @@ export class ProjectsComponent implements OnInit {
     console.log(this.projects);
   }
 
+  hello(project){
+    alert(project.description);
+  }
+
 }

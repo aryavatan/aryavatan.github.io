@@ -15,6 +15,7 @@
     "projects":[
         {
             "name":"Angular Sound",
+            "id":"AngularSound",
             "description":"A full stack web application made with Angular, JavaScript, and MongoDB. This project is a music review (demo) site in which authenticated users can write reviews for songs",
             "github": "https://github.com/aryavatan/Angular-Sound",
             "skills":[
