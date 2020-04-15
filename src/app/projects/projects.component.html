@@ -1,7 +1,7 @@
 <h2>Projects</h2>
 
 <ul *ngIf="projects">
-    <li *ngFor="let project of projects" id="{{project.id}}" (click)="hello(project)">
+    <li *ngFor="let project of projects" id="{{project.id}}" (click)="projectClicked(project)">
         <strong>{{ project.name }}</strong>
         <p>{{project.description}}</p>
     </li>
