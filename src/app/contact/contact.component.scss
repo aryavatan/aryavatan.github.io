@@ -47,6 +47,7 @@ ul {
         border-color: #aaa;
         border-radius: 10px;
         overflow: hidden;
+        transition: 0.3s ease;
 
         h3 {
             color: $primary;
