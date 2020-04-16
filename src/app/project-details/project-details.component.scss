@@ -9,8 +9,9 @@ h3 {
 }
 
 h2 {
-	text-align: center;
+	text-align: left;
 	text-decoration: underline;
+	margin-top: 0;
 }
 
 p {
@@ -195,7 +196,8 @@ p {
 
 	li {
 		background: $primary;
-		padding: 1em;
+		padding: 10px;
+		font-size: 16px;
 		margin-right: 10px;
 		width: auto;
 		height: auto;
@@ -214,7 +216,7 @@ p {
 }
 
 #github {
-	margin-left: 25%;
+	margin-left: 1em;
 
 	&:link,
 	&:visited {

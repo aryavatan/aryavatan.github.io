@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, AfterViewChecked, OnDestroy } from '@angular/core';
 import { ProjectService } from '../project.service';
 
 @Component({
@@ -18,6 +18,7 @@ export class ProjectDetailsComponent implements OnInit {
 
 	ngOnInit() {
 		this.project = this.projectService.getSelectedProject();
+		console.log(this.project);
 		this.skills = this.project.skills;
 		this.slideIndex = 0;
 		this.showModal = "none";

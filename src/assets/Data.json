@@ -12,13 +12,14 @@
         "React",
         "Angular"
     ],
-    "projects":[
+    "projects": [
         {
-            "name":"Angular Sound",
-            "id":"AngularSound",
-            "description":"A full stack web application made with Angular, JavaScript, and MongoDB. This project is a music review (demo) site in which authenticated users can write reviews for songs",
+            "name": "Angular Sound",
+            "id": "AngularSound",
+            "summary": "A full stack web application made with Angular, JavaScript, and MongoDB. This project is a music review (demo) site in which authenticated users can write reviews for songs",
+            "description": "A full stack web application made with the Angular framework for the front-end, Node.js for the back-end server, and MongoDB for the database solution. This project is a music review (demo) site in which authenticated users write reviews for songs. Once a user has registered with the site, they are able to write reviews for any song.",
             "github": "https://github.com/aryavatan/Angular-Sound",
-            "skills":[
+            "skills": [
                 "Angular",
                 "TypeScript",
                 "HTML",
@@ -27,22 +28,22 @@
                 "Node.js",
                 "MongoDB"
             ],
-            "pictures":[
+            "pictures": [
                 {
                     "caption": "Homepage",
-                    "src":"assets/Projects/AngularSound/1.PNG"
+                    "src": "assets/Projects/AngularSound/1.PNG"
                 },
                 {
                     "caption": "Songs page",
-                    "src":"assets/Projects/AngularSound/2.PNG"
+                    "src": "assets/Projects/AngularSound/2.PNG"
                 },
                 {
                     "caption": "Song reviews page",
-                    "src":"assets/Projects/AngularSound/3.PNG"
+                    "src": "assets/Projects/AngularSound/3.PNG"
                 },
                 {
                     "caption": "Write a review",
-                    "src":"assets/Projects/AngularSound/4.PNG"
+                    "src": "assets/Projects/AngularSound/4.PNG"
                 }
             ]
         }
