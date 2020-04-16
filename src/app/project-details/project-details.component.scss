@@ -11,8 +11,10 @@ h1, h2 {
   }
   
   /* Position the image container (needed to position the left and right arrows) */
-  .container {
-    position: relative;
+  .image-container {
+    position: absolute;  // relative for fullscreen
+    width: 40%; // omitted for fullscreen
+    margin-left: 1em;
   }
   
   /* Hide the images by default */
@@ -74,11 +76,19 @@ h1, h2 {
   }
   
   /* Container for image text */
+  .modal-caption,
   .caption-container {
+    font-family: 'Roboto Condensed', sans-serif;
     text-align: center;
     background-color: $secondary;
     padding: 2px 16px;
     color: $primary;
+  }
+
+  /* Modal Caption text */
+  .modal-caption {
+    margin-bottom: 20px;
+    font-size: 125%;
   }
   
   .row:after {
@@ -142,14 +152,7 @@ h1, h2 {
     cursor: pointer;
   }
 
-  /* Modal Caption text */
-.modal-caption {
-    text-align: center;
-    background-color: $secondary;
-    padding: 2px 16px;
-    margin-bottom: 20px;
-    color: $primary;
-  }
+
 
   /* Modal Next & previous buttons */
 .modal-prev,
