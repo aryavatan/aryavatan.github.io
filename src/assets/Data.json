@@ -27,10 +27,22 @@
                 "TypeScript"
             ],
             "pictures":[
-                "assets/AngularSound/1.PNG",
-                "assets/AngularSound/2.PNG",
-                "assets/AngularSound/3.PNG",
-                "assets/AngularSound/4.PNG"
+                {
+                    "caption": "Homepage",
+                    "src":"assets/Projects/AngularSound/1.PNG"
+                },
+                {
+                    "caption": "Songs page",
+                    "src":"assets/Projects/AngularSound/2.PNG"
+                },
+                {
+                    "caption": "Song reviews page",
+                    "src":"assets/Projects/AngularSound/3.PNG"
+                },
+                {
+                    "caption": "Write a review",
+                    "src":"assets/Projects/AngularSound/4.PNG"
+                }
             ]
         }
     ]

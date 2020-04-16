@@ -14,6 +14,10 @@ export class ProjectService {
   }
 
   getSelectedProject(){
+    for(let i = 0; i < this.selectedProject.pictures.length; i++){
+      this.selectedProject.pictures[i].show = "none";
+      this.selectedProject.pictures[i].opacity = 0.6;
+    }
     return this.selectedProject;
   }
 

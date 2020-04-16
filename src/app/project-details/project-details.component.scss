@@ -1,0 +1,158 @@
+$primary:rgb(152, 230, 152);
+$secondary: rgb(29, 31, 32);
+
+h1, h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: $primary;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .modal-prev,
+  .modal-next,
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    background-color: $secondary;
+    opacity: 0.3;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 5px 5px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: 0.4s ease;
+  }
+  
+  /* Position the "next button" to the right */
+  .modal-next,
+  .next {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover,
+  .modal-prev:hover,
+  .modal-next:hover {
+      opacity: 1;
+      color: $primary;
+    // background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: $secondary;
+    padding: 2px 16px;
+    color: $primary;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 20%;
+    margin-left: 1em;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+    transition: 0.4s ease;
+  }
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: $secondary;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: $secondary;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1300px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #999;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.2s ease;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: $primary;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Modal Caption text */
+.modal-caption {
+    text-align: center;
+    background-color: $secondary;
+    padding: 2px 16px;
+    margin-bottom: 20px;
+    color: $primary;
+  }
+
+  /* Modal Next & previous buttons */
+.modal-prev,
+.modal-next {
+  top: 60%;
+}
