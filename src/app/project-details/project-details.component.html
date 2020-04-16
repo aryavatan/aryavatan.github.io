@@ -1,54 +1,78 @@
-<h2>{{project.name}}</h2>
+<div class="clearfix">
+    <h2>{{project.name}}</h2>
 
-<!-- Container for the image gallery -->
-<div *ngIf="project.pictures" class="image-container">
-
-    <!-- The Modal -->
-    <div id="myModal" class="modal" [style.display]="showModal">
-
-        <!-- The Close Button -->
-        <span class="close" (click)="closeModal()">&times;</span>
-        <div class="modal-content">
-            <!-- Modal Caption (Image Text) -->
-            <div class="modal-caption">
+    <div class="box">
+        <!-- Container for the image gallery -->
+        <div *ngIf="project.pictures" class="image-container">
+        
+            <!-- The Modal -->
+            <div id="myModal" class="modal" [style.display]="showModal">
+        
+                <!-- The Close Button -->
+                <span class="close" (click)="closeModal()">&times;</span>
+                <div class="modal-content">
+                    <!-- Modal Caption (Image Text) -->
+                    <div class="modal-caption">
+                        <p id="caption">{{caption}}</p>
+                    </div>
+        
+                    <div class="numbertext">{{slideIndex + 1}} / {{project.pictures.length}}</div>
+        
+                    <div *ngFor="let picture of project.pictures" class="modalSlides" [style.display]="picture.show">
+                        <img src="{{picture.src}}" style="width:100%">
+                    </div>
+        
+                    <!-- Next/previous controls -->
+                    <a class="modal-prev" (click)="plusSlides(-1)">&#10094;</a>
+                    <a class="modal-next" (click)="plusSlides(1)">&#10095;</a>
+        
+                </div>
+            </div>
+        
+            <!-- Full-width images with number text -->
+            <div *ngFor="let picture of project.pictures" class="mySlides" [style.display]="picture.show">
+                <img src="{{picture.src}}" style="width:100%" (click)="openModal()">
+            </div>
+        
+            <div class="numbertext">{{slideIndex + 1}} / {{project.pictures.length}}</div>
+        
+            <!-- Next and previous buttons -->
+            <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
+            <a class="next" (click)="plusSlides(1)">&#10095;</a>
+        
+            <!-- Image text -->
+            <div class="caption-container">
                 <p id="caption">{{caption}}</p>
             </div>
-
-            <div class="numbertext">{{slideIndex + 1}} / {{project.pictures.length}}</div>
-
-            <div *ngFor="let picture of project.pictures" class="modalSlides" [style.display]="picture.show">
-                <img src="{{picture.src}}" style="width:100%">
+        
+            <!-- Thumbnail images -->
+            <div class="row">
+                <div *ngFor="let picture of project.pictures" class="column">
+                    <img class="demo cursor" src="{{picture.src}}" style="width:100%" [style.opacity]="picture.opacity"
+                        (mouseover)="changeDemoOpacity(picture.src, 1)" (mouseout)="changeDemoOpacity(picture.src, 0.6)"
+                        (click)="currentSlide(picture.src)" alt="{{picture.caption}}">
+                </div>
             </div>
-
-            <!-- Next/previous controls -->
-            <a class="modal-prev" (click)="plusSlides(-1)">&#10094;</a>
-            <a class="modal-next" (click)="plusSlides(1)">&#10095;</a>
-
         </div>
     </div>
 
-    <!-- Full-width images with number text -->
-    <div *ngFor="let picture of project.pictures" class="mySlides" [style.display]="picture.show">
-        <img src="{{picture.src}}" style="width:100%" (click)="openModal()">
-    </div>
-
-    <div class="numbertext">{{slideIndex + 1}} / {{project.pictures.length}}</div>
-
-    <!-- Next and previous buttons -->
-    <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
-    <a class="next" (click)="plusSlides(1)">&#10095;</a>
-
-    <!-- Image text -->
-    <div class="caption-container">
-        <p id="caption">{{caption}}</p>
-    </div>
-
-    <!-- Thumbnail images -->
-    <div class="row">
-        <div *ngFor="let picture of project.pictures" class="column">
-            <img class="demo cursor" src="{{picture.src}}" style="width:100%" [style.opacity]="picture.opacity"
-                (mouseover)="changeDemoOpacity(picture.src, 1)" (mouseout)="changeDemoOpacity(picture.src, 0.6)"
-                (click)="currentSlide(picture.src)" alt="{{picture.caption}}">
+    <div class="box">
+        <h3>Description</h3>
+        <p>{{project.description}}</p>
+        
+        <div id="skills">
+            <h3>Built With:</h3>
+            <ul *ngIf="skills">
+                <li *ngFor="let skill of skills">{{ skill }}</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Want To Learn More?</h3>
+            <p>Visit the open source GitHub repository for this project:</p>
+        </div>
+        <div>
+            <a id="github" href="{{project.github}}" target="_blank">Here</a>
         </div>
     </div>
+
 </div>

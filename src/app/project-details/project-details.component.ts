@@ -12,11 +12,13 @@ export class ProjectDetailsComponent implements OnInit {
 	slideIndex: Number;
 	caption: string;
 	showModal: string;
+	skills: Object;
 
 	constructor(private projectService: ProjectService) { }
 
 	ngOnInit() {
 		this.project = this.projectService.getSelectedProject();
+		this.skills = this.project.skills;
 		this.slideIndex = 0;
 		this.showModal = "none";
 		this.showSlides(this.slideIndex);

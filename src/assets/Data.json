@@ -20,11 +20,12 @@
             "github": "https://github.com/aryavatan/Angular-Sound",
             "skills":[
                 "Angular",
-                "JavaScript",
+                "TypeScript",
+                "HTML",
                 "CSS",
+                "JavaScript",
                 "Node.js",
-                "MongoDB",
-                "TypeScript"
+                "MongoDB"
             ],
             "pictures":[
                 {
