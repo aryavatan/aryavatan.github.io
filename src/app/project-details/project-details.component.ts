@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, AfterViewChecked, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ProjectService } from '../project.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { ProjectService } from '../project.service';
 	templateUrl: './project-details.component.html',
 	styleUrls: ['./project-details.component.scss']
 })
-export class ProjectDetailsComponent implements OnInit {
+export class ProjectDetailsComponent implements OnInit, OnDestroy {
 
 	project: any;
 	slideIndex: Number;
@@ -15,14 +15,22 @@ export class ProjectDetailsComponent implements OnInit {
 	skills: Object;
 
 	constructor(private projectService: ProjectService) { }
+	
+	ngOnDestroy(): void {
+		localStorage.removeItem('project');
+	}
 
-	ngOnInit() {
-		this.project = this.projectService.getSelectedProject();
-		console.log(this.project);
-		this.skills = this.project.skills;
-		this.slideIndex = 0;
-		this.showModal = "none";
-		this.showSlides(this.slideIndex);
+	ngOnInit() {		
+		this.projectService.getSelectedProjectObservable().subscribe(value => {
+			this.project = value;
+			localStorage.setItem('project', this.project.id);  // reset local storage incase they backstep to this page after ng destory
+
+			// The rest of these should only be executed after project is found
+			this.skills = this.project.skills;
+			this.slideIndex = 0;
+			this.showModal = "none";
+			this.showSlides(this.slideIndex);
+		});
 	}
 
 	plusSlides(n){

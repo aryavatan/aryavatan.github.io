@@ -17,7 +17,7 @@ export class AppComponent implements OnDestroy {
 
   constructor(private router: Router, private projectService: ProjectService) {
     this.subscription = router.events.subscribe((event) => {
-        if (event instanceof NavigationStart) {
+        if (event instanceof NavigationStart) {  // AFTER BROWSER REFRESH
           browserRefresh = !router.navigated;
           console.log("Refreshed");
         }
