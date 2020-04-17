@@ -1,15 +1,20 @@
 <p>
     Projects page still in development! Hoping to have it wrapped up in a few days!
     <br>
-    In the meantime, check out my 
+    In the meantime, check out my
     <a href="https://github.com/aryavatan" target="_blank"><span>GitHub</span></a>
 </p>
-
 <h2>Projects</h2>
+<div class="main">
+    <div *ngIf="projects" class="row">
+        <div *ngFor="let project of projects" id="{{project.id}}" class="column">
+            <div class="content" (click)="projectClicked(project)">
+                <img src="{{project.icon}}" alt="{{project.name}}" style="width:100%">
+                <h3>{{project.name}}</h3>
+                <p>{{project.summary}}</p>
+            </div>
+        </div>
+        
 
-<ul *ngIf="projects">
-    <li *ngFor="let project of projects" id="{{project.id}}" (click)="projectClicked(project)">
-        <strong>{{ project.name }}</strong>
-        <p>{{project.summary}}</p>
-    </li>
-</ul>
+    </div>
+</div>
