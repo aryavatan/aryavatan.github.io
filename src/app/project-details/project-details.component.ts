@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ProjectService } from '../project.service';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-project-details',
@@ -14,7 +15,7 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
 	showModal: string;
 	skills: Object;
 
-	constructor(private projectService: ProjectService) { }
+	constructor(private router: Router, private projectService: ProjectService) { }
 	
 	ngOnDestroy(): void {
 		localStorage.removeItem('project');
@@ -31,6 +32,13 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
 			this.showModal = "none";
 			this.showSlides(this.slideIndex);
 		});
+
+		// Block direct URL access if not project is selected
+		setTimeout(() => {
+			if(this.project == undefined){  
+				this.router.navigate(['/projects']);
+			}
+		}, 100);
 	}
 
 	plusSlides(n){
