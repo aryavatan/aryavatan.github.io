@@ -16,7 +16,7 @@
         {
             "name": "Angular Sound",
             "id": "AngularSound",
-            "summary": "A full stack web application made with Angular, JavaScript, and MongoDB. This project is a music review (demo) site in which authenticated users can write reviews for songs",
+            "summary": "A music review site in which authenticated users can write reviews for songs",
             "description": "A full stack web application made with the Angular framework for the front-end, Node.js for the back-end server, and MongoDB for the database solution. This project is a music review (demo) site in which authenticated users write reviews for songs. Once a user has registered with the site, they are able to write reviews for any song.",
             "github": "https://github.com/aryavatan/Angular-Sound",
             "skills": [
@@ -31,20 +31,44 @@
             "icon":"assets/Projects/AngularSound/2.PNG",
             "pictures": [
                 {
-                    "caption": "Homepage",
+                    "caption": "Home Page",
                     "src": "assets/Projects/AngularSound/1.PNG"
                 },
                 {
-                    "caption": "Songs page",
+                    "caption": "Songs Page",
                     "src": "assets/Projects/AngularSound/2.PNG"
                 },
                 {
-                    "caption": "Song reviews page",
+                    "caption": "Song Reviews Page",
                     "src": "assets/Projects/AngularSound/3.PNG"
                 },
                 {
-                    "caption": "Write a review",
+                    "caption": "Write A Review",
                     "src": "assets/Projects/AngularSound/4.PNG"
+                }
+            ]
+        },
+        {
+            "name": "OS Chatroom",
+            "id": "OSChatroom",
+            "summary": "A chatroom web application using client/server architecture.",
+            "description": "This app was developed as the final project for my Operating Systems course with three other friends. It is a chatroom web application using client/server architecture. Each front-end client enters their display name and can chat with other users in the same \"chatroom\". Clients can also make a private room, the name of the chatroom acts as the password, and chat with their friends. Node.js and Socket.io were used to route the messages between clients and different chatrooms",
+            "github": "https://github.com/aryavatan/OS-Chatroom",
+            "skills": [
+                "JavaScript",
+                "HTML",
+                "CSS",
+                "Node.js"
+            ],
+            "icon":"assets/Projects/OSChatroom/1.PNG",
+            "pictures": [
+                {
+                    "caption": "Chatroom",
+                    "src": "assets/Projects/OSChatroom/1.PNG"
+                },
+                {
+                    "caption": "Private Group Chatroom",
+                    "src": "assets/Projects/OSChatroom/2.PNG"
                 }
             ]
         }
