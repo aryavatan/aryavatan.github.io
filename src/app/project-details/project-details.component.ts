@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class ProjectDetailsComponent implements OnInit, OnDestroy {
 
 	project: any;
-	slideIndex: Number;
+	slideIndex: any;
 	caption: string;
 	showModal: string;
 	skills: Object;
