@@ -2,7 +2,7 @@
     <div class="box" id="image">
         <img src="assets/Beach.JPG" alt="Arya">
     </div>
-    
+
     <div class="box" id="text">
         <h1>Hey there!</h1>
         <h1>I'm Arya Vatan-Abadi</h1>
@@ -12,7 +12,7 @@
 
         <div id="skills">
             <ul *ngIf="skills">
-                <li *ngFor="let skill of skills">{{ skill }}</li>
+                <li *ngFor="let skill of skills" [class]="skill.class" (click)="skillClicked(skill)">{{ skill.name }}</li>
             </ul>
         </div>
 

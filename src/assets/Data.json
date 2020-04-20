@@ -16,7 +16,7 @@
         {
             "name": "Angular Sound",
             "id": "AngularSound",
-            "summary": "A music review site in which authenticated users can write reviews for songs",
+            "summary": "A music review site in which registered users can write reviews for songs",
             "description": "A full stack web application made with the Angular framework for the front-end, Node.js for the back-end server, and MongoDB for the database solution. This project is a music review (demo) site in which authenticated users write reviews for songs. Once a user has registered with the site, they are able to write reviews for any song.",
             "github": "https://github.com/aryavatan/Angular-Sound",
             "skills": [

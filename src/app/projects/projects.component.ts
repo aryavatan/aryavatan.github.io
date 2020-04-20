@@ -22,6 +22,17 @@ export class ProjectsComponent implements OnInit {
 		this.projects = JSON.parse(JSON.stringify(this.allProjects)); // Make deep copy
 
 		this.getFilterSkills();  // Extract Skills from the projects
+
+		let filterRequest;
+		if((filterRequest = localStorage.getItem('filter')) != null){
+			localStorage.removeItem('filter');  // Remove filter from local storage
+			this.filters.forEach(filter => {
+				if(filter.name == filterRequest){
+					this.filterSelected(filter);
+					return;
+				}
+			});
+		}
 	}
 
 	projectClicked(project) {
@@ -30,24 +41,8 @@ export class ProjectsComponent implements OnInit {
 	}
 
 	getFilterSkills() {
-		let list = [];
-		this.projects.forEach(project => {
-			project.skills.forEach(skill => {
-				let duplicate = false;
-
-				list.forEach(filter => {
-					if(filter.name == skill){
-						duplicate = true;
-					}
-				})
-
-				if (!duplicate) {
-					list.push({name:skill, class:""});
-				}
-			})
-		});
 		this.selectedFilter = 'selected';  // This will initially select "Show All" option
-		this.filters = list.sort();
+		this.filters = this.projectService.getFilterSkills();
 	}
 
 	filterSelected(filter){		
@@ -75,6 +70,8 @@ export class ProjectsComponent implements OnInit {
 			}
 		});
 		this.projects = filteredProjects;  // Assign to data-binded projects variable
+
+		console.log(this.selectedFilter);
 	}
 
 }

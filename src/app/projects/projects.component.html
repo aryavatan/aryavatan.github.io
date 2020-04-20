@@ -1,6 +1,6 @@
 <h2>Projects</h2>
 <div class="filters-list">
-    <ul *ngIf="filters" >
+    <ul *ngIf="filters">
         <li (click)="filterSelected({name:'Show All'})" [class]="selectedFilter">
             Show All
         </li>
@@ -19,7 +19,5 @@
                 <p>{{project.summary}}</p>
             </div>
         </div>
-        
-
     </div>
 </div>

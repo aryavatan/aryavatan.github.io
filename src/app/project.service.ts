@@ -39,4 +39,42 @@ export class ProjectService {
 			observer.complete();
 		})
 	}
+
+	// Generate and return a list of filters for projects
+	getFilterSkills() {
+		let list = [];
+
+		data.projects.forEach(project => {
+			project.skills.forEach(skill => {
+				let duplicate = false;
+
+				list.forEach(filter => {
+					if(filter.name == skill){
+						duplicate = true;
+					}
+				})
+
+				if (!duplicate) {
+					list.push({name:skill, class:""});
+				}
+			})
+		});
+		
+		return list.sort();
+	}
+
+	// Check if skill is in filters
+	doesSkillHaveProjects(skill){
+		let filters = this.getFilterSkills();
+		let hasProjects = false;
+		
+		filters.forEach(filter => {
+			if(filter.name == skill){
+				hasProjects = true;
+				return true;
+			}
+		});
+
+		return hasProjects;
+	}
 }
