@@ -27,7 +27,7 @@
 <div id="skills">
     <h2>PROGRAMMING SKILLS</h2>
     <ul *ngIf="skills">
-        <li *ngFor="let skill of skills">{{ skill }}</li>
+        <li *ngFor="let skill of skills" [class]="skill.class" (click)="skillClicked(skill)">{{ skill.name }}</li>
     </ul>
 
 </div>
