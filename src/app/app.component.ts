@@ -6,25 +6,35 @@ import { ProjectService } from './project.service';
 export let browserRefresh = false;
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnDestroy {
-  title = 'Arya-Resume';
+	title = 'Arya-Resume';
 
-  subscription: Subscription;
+	subscription: Subscription;
+	sidenavWidth: any;
 
-  constructor(private router: Router, private projectService: ProjectService) {
-    this.subscription = router.events.subscribe((event) => {
-        if (event instanceof NavigationStart) {  // AFTER BROWSER REFRESH
-          browserRefresh = !router.navigated;
-          console.log("Refreshed");
-        }
-    });
-  }
+	constructor(private router: Router, private projectService: ProjectService) {
+		this.subscription = router.events.subscribe((event) => {
+			if (event instanceof NavigationStart) {  // AFTER BROWSER REFRESH
+				browserRefresh = !router.navigated;
+				console.log("Refreshed");
+			}
+		});
+	}
 
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
-  }
+	ngOnDestroy() {
+		this.subscription.unsubscribe();
+	}
+
+	openNav(){
+		this.sidenavWidth = "220px";
+	}
+
+	closeNav(){
+		this.sidenavWidth = 0;
+	}
+
 }
