@@ -109,12 +109,12 @@ header {
     display: block;
     transition: 0.2s;
     font-family: "Roboto Condensed", sans-serif;
-    
+
     /* When you mouse over the navigation links, change their background color */
     &:hover {
         background-color: darken($primary, 25%);
     }
-    
+
     /* Position and style the close button (top right corner) */
     &.closebtn {
         position: absolute;
@@ -122,11 +122,17 @@ header {
         right: 25px;
         font-size: 36px;
         margin-left: 50px;
-    
+
         &:hover {
             cursor: pointer;
             background-color: $primary;
             color: white;
         }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .container {
+        width: 85%;
     }
 }

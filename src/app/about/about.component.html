@@ -2,19 +2,20 @@
     <img src="assets/Middlesex.png" alt="Middlesex College Western University">    
 </div>
 
-<h2>ABOUT ME</h2>
+<h2>About Me</h2>
 
 <div id="profile">
     <p>
-        I am Arya Vatan-Abadi, a software engineer from Toronto, Canada.
+        I'm Arya Vatan-Abadi, a software engineer from Toronto, Canada.
         I am a focused and driven individual with a passion for 
         problem-solving and strong interpersonal skills that 
-        translate into an effective team member.
+        translate into an effective team member. In my spare time I like to
+        work on cool projects, read, and play video games.
     </p>    
 </div>
 
 <div id="education">
-    <h2>EDUCATION</h2>
+    <h2>Education</h2>
     <p>
         <b>Bachelor of Software Engineering</b>
         <br>
@@ -25,7 +26,7 @@
 </div>
 
 <div id="skills">
-    <h2>PROGRAMMING SKILLS</h2>
+    <h2>Programming Skills</h2>
     <ul *ngIf="skills">
         <li *ngFor="let skill of skills" [class]="skill.class" (click)="skillClicked(skill)">{{ skill.name }}</li>
     </ul>
@@ -33,7 +34,7 @@
 </div>
 
 <div id="awards">
-    <h2>AWARDS</h2>
+    <h2>Awards</h2>
     <ul>
         <li>
             <b>SCOTIABANK HACKATHON (S:\HACKS)</b><br>

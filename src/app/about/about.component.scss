@@ -1,4 +1,4 @@
-$primary:rgb(152, 230, 152);
+$primary: rgb(152, 230, 152);
 
 img {
     width: auto;
@@ -6,32 +6,40 @@ img {
     height: auto;
     max-height: 100%;
     border-radius: 20px;
-    margin-top: 2em;
+    margin-top: 1em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-p, li {
-    font-family: 'Roboto Condensed', sans-serif;
+p,
+li {
+    font-family: "Roboto Condensed", sans-serif;
     font-size: 20px;
     color: white;
 }
 
 h2 {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     color: $primary;
+    margin-top: 50px;
+}
+#awards > h2 {
+    margin-top: 40px;
 }
 
 p {
     margin-left: 1em;
 }
 
-#profile{
+#profile {
     //margin-left: 1em;
     width: auto;
     max-width: 50%;
 }
 
 #skills > ul {
-	list-style-type: none;
+    list-style-type: none;
     margin: 0;
     margin-left: 1em;
     padding: 0;
@@ -40,7 +48,7 @@ p {
 
     li {
         background: $primary;
-        padding: 1em;
+        padding: 18px;
         margin-right: 10px;
         width: auto;
         height: auto;
@@ -52,9 +60,9 @@ p {
         transition: 0.2s ease;
     }
 
-    li:hover{
+    li:hover {
         background: darken($primary, 25%);
-        &.has-project{
+        &.has-project {
             font-weight: bolder;
             cursor: pointer;
         }
@@ -66,8 +74,38 @@ p {
     margin-left: 0;
     padding-left: 1em;
 
-    li{
+    li {
         padding-bottom: 1em;
         padding-left: 0;
+    }
+}
+
+// MAX WIDTH: 1300px =========================================================
+@media screen and (max-width: 1300px) {
+    #profile {
+        max-width: 98%;
+    }
+
+    #skills > ul {
+        li {
+            padding: 12px;
+
+            &:hover {
+                background: $primary;
+                &.has-project {
+                    background-color: darken($primary, 25%);
+                    font-weight: bolder;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+// MAX WIDTH: 900px =========================================================
+@media screen and (max-width: 900px) {
+    img {
+        border-radius: 12px;
+        margin-top: 0;
     }
 }
