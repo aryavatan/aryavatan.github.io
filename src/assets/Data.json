@@ -71,6 +71,31 @@
                     "src": "assets/Projects/OSChatroom/2.PNG"
                 }
             ]
+        },
+        {
+            "name": "Simple Sketchpad",
+            "id": "sketchpad",
+            "summary": "A simple sketchpad, similar to microsoft paint.",
+            "description": "A simple sketchpad, similar to microsoft paint, written in Java using the Java AWT library. In addition to freehand drawing, basic shapes can be drawn as well, such as rectangles, lines, and ellipes. The color of each object can be changed as well, from black, red, green, blue, and yellow. Lastly, there is a save and load feature to allow you to save your sketch and load it later on to keep working on it.",
+            "github": "https://github.com/aryavatan/SimpleSketchpad",
+            "skills": [
+                "Java"
+            ],
+            "icon":"assets/Projects/Sketchpad/shapes.PNG",
+            "pictures": [
+                {
+                    "caption": "Drawing With Shapes",
+                    "src": "assets/Projects/Sketchpad/shapes.PNG"
+                },
+                {
+                    "caption": "Saving Your Drawing",
+                    "src": "assets/Projects/Sketchpad/save.PNG"
+                },
+                {
+                    "caption": "Freehand Drawing",
+                    "src": "assets/Projects/Sketchpad/freehand.PNG"
+                }
+            ]
         }
     ]
 }
