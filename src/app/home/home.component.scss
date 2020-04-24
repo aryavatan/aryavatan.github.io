@@ -1,5 +1,5 @@
-//$primary:rgb(30, 242, 107);
 $primary: rgb(152, 230, 152);
+$secondary: rgb(29, 31, 32);
 
 #image {
     height: 70%;
@@ -8,12 +8,13 @@ $primary: rgb(152, 230, 152);
 img {
     object-fit: cover;
     overflow: hidden;
-    // object-position: 20% 0px;
+    object-position: 20% 0px;
     width: auto;
     height: auto;
-    max-width: 90%;
+    max-width: 500px;
     max-height: 90%;
     border-radius: 8px;
+    margin-left: 20%;
 }
 
 div#text {
@@ -44,7 +45,7 @@ div#text {
 .box {
     float: left;
     width: 50%;
-    padding: 50px;
+    padding: 40px;
 }
 
 .clearfix::after {
@@ -83,7 +84,114 @@ div#text {
     }
 }
 
-// MAX WIDTH: 1415 =========================================================
-@media screen and (max-width: 1415px) {
-    
+// MAX WIDTH: 2000px =========================================================
+@media screen and (max-width: 2000px) {
+    img {
+        margin-left: 15%;
+    }
+}
+
+// MAX WIDTH: 1600px =========================================================
+@media screen and (max-width: 1600px) {
+    img {
+        object-fit: cover;
+        overflow: hidden;
+        width: auto;
+        height: auto;
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 8px;
+        margin-left: 5%;
+    }
+
+    .box {
+        padding: 40px;
+    }
+}
+
+// MAX WIDTH: 1430px =========================================================
+@media screen and (max-width: 1430px) {
+    img{
+        margin: auto;
+    }
+    #skills > ul > li {
+        padding: 15px;
+    }
+}
+
+// MAX WIDTH: 1250px =========================================================
+@media screen and (max-width: 1250px){
+    .box {
+        padding: 0px;
+    }
+}
+
+// MAX WIDTH: 1130px =========================================================
+@media screen and (max-width: 1130px){
+    #skills > ul > li {
+        padding: 12px;
+    }
+}
+
+// MAX WIDTH: 1100px =========================================================
+@media screen and (max-width: 1100px){
+    .clearfix{
+        position: relative;
+    }
+    div#text {
+        h1 {
+            font-size: 225%;
+        }
+    }
+    #skills > ul > li {
+        padding: 8px;
+        font-size: 16px;
+    }
+}
+
+// MAX WIDTH: 950px =========================================================
+@media screen and (max-width: 950px){
+    div#text {
+        h1 {
+            font-size: 150%;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+        p {
+            font-size: 16px;
+            margin: 0;
+            margin-bottom: 0;
+        }
+    }
+    #skills > ul {
+        margin-top: 30px;
+    }
+}
+
+// MAX WIDTH: 725px =========================================================
+@media screen and (max-width: 725px){
+    .box{
+        width: 100%;
+    }
+    img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        object-fit: cover;
+        max-width: 100%;
+        max-height: 500px;
+    }
+    div#text {
+        text-align: center;
+        p {
+            font-size: 17px;
+        }
+    }
+    #skills > ul {
+        align-items: center;
+        justify-content: center;
+        li {
+            padding: 16px;
+        }
+    }
 }
