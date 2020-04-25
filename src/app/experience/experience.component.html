@@ -1,95 +1,23 @@
 <div class="timeline">
 
-    <div class="entry">
+    <div class="entry" *ngFor="let experience of experiences">
         <div class="title">
-            <h3>May - August, 2019</h3>
-            <p>Software Developer (Intern)<br>
-                <a href="https://www.bbssecurities.com/" target="_blank">
-                    BBS Securities Inc.
+            <h3>{{experience.dates}}</h3>
+            <p>{{experience.title}}<br>
+                <a *ngIf="experience.employerSite" href="{{experience.employerSite}}" target="_blank">
+                    {{experience.employer}}
                 </a>
+                <span *ngIf="experience.employerSite == undefined">
+                    {{experience.employer}}
+                </span>
             </p>
         </div>
         <div class="body">
-            <p>
-                Returning to BBS Securities for a second internship, I was able 
-                to have more responsibilities which resulted in a more rewarding
-                experience for me. I took part in high level meetings and developed 
-                bigger and more important projects.
-            </p>
+            <p>{{experience.summary}}</p>
             <ul>
-                <li>Generated SQL queries and procedures to automate the process of modifying employee access/permissions</li>
-                <li>Developed a tool to enable traders to quickly send emails to various groups of clients about new issues and stocks</li>
-                <li>Worked on developing an automated stock purchasing system which significantly decreased incorrect manual purchases and clients complaints</li>
+                <li *ngFor="let keyPoint of experience.keyPoints">{{keyPoint}}</li>
             </ul>
         </div>
     </div>
-
-
-    <div class="entry">
-        <div class="title">
-            <h3>May - August, 2018</h3>
-            <p>Software Developer (Intern)<br>
-                <a href="https://www.bbssecurities.com/" target="_blank">
-                    BBS Securities Inc.
-                </a>
-            </p>
-        </div>
-        <div class="body">
-            <p>
-                Working as a software development intern at BBS Securities,
-                I developed a strong work ethic, while also expanding my teamwork
-                and problem-solving skills. I was also able to learn and work with 
-                new technologies like C#, .NET, and SQL.
-            </p>
-            <ul>
-                <li>Developed an application to receive bank transfer files from BMO and save information to database</li>
-                <li>Redeveloped C++ legacy code into C# code to help company transition to new technologies</li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="entry">
-        <div class="title">
-            <h3>August 2016 - April 2018</h3>
-            <p>Founder<br>AVA Computer Upgrades</p>
-        </div>
-        <div class="body">
-            <p>
-                Launching my first business taught me that success
-                comes to those who are willing to work hard. I turned my
-                passion of building and working on computers into a profitable
-                business and learned a lot in the process.
-            </p>
-            <ul>
-                <li>Repaired over 50 computer systems over ~2 years of operation</li>
-                <li>Accumulated over 2000 followers on social media using social media marketing techniques</li>
-            </ul>
-        </div>
-    </div>
-
-
-    <div class="entry">
-        <div class="title">
-            <h3>October 2015 - July 2016</h3>
-            <p>Team Member (Front Counter)<br>
-                <a href="https://www.freshii.com/ca/en-ca/home" target="_blank">
-                    Freshii
-                </a>
-            </p>
-        </div>
-        <div class="body">
-            <p>
-                This role helped shape me into the person I am today. I learned
-                invaluable skills such as leadership, multi-tasking, humility,
-                and patience as I moved up from the kitchen to the front counter 
-                to supervising operations during my shifts. 
-            </p>
-            <ul>
-                <li>Provided friendly and professional customer service</li>
-                <li>Fully trained 10 new team members in store operations</li>
-                <li>Supervised operations after demonstrating leadership and a positive attitude</li>
-            </ul>
-        </div>
-    </div>
-
+    
 </div>
