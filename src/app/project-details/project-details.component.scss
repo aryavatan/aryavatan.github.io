@@ -4,52 +4,52 @@ $secondary: rgb(29, 31, 32);
 h1,
 h2,
 h3 {
-	font-family: "Roboto Condensed", sans-serif;
-	color: $primary;
+    font-family: "Roboto Condensed", sans-serif;
+    color: $primary;
 }
 
 h2 {
-	text-align: left;
-	text-decoration: underline;
-	margin-top: 0;
+    text-align: left;
+    text-decoration: underline;
+    margin-top: 0;
 }
 
 p {
-	color: white;
-	margin-left: 1em;
+    color: white;
+    margin-left: 1em;
 }
 
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* Position the image container (needed to position the left and right arrows) */
 .image-container {
-	position: relative; // relative for fullscreen
-	width: 100%; // omitted for fullscreen
-	// margin-left: 1em;
+    position: relative; // relative for fullscreen
+    width: 100%; // omitted for fullscreen
+    // margin-left: 1em;
 }
 
 .box {
-	float: left;
-	width: 50%;
-	padding: 50px;
+    float: left;
+    width: 50%;
+    padding: 50px;
 }
 
 .clearfix::after {
-	content: "";
-	clear: both;
-	display: table;
+    content: "";
+    clear: both;
+    display: table;
 }
 
 /* Hide the images by default */
 .mySlides {
-	display: none;
+    display: none;
 }
 
 /* Add a pointer when hovering over the thumbnail images */
 .cursor {
-	cursor: pointer;
+    cursor: pointer;
 }
 
 /* Next & previous buttons */
@@ -57,28 +57,28 @@ p {
 .modal-next,
 .prev,
 .next {
-	cursor: pointer;
-	position: absolute;
-	top: 40%;
-	width: auto;
-	padding: 16px;
-	margin-top: -50px;
-	color: white;
-	background-color: $secondary;
-	opacity: 0.3;
-	font-weight: bold;
-	font-size: 20px;
-	border-radius: 0 5px 5px 0;
-	user-select: none;
-	-webkit-user-select: none;
-	transition: 0.4s ease;
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    background-color: $secondary;
+    opacity: 0.3;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 5px 5px 0;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: 0.4s ease;
 }
 
 /* Position the "next button" to the right */
 .modal-next,
 .next {
-	right: 0;
-	border-radius: 5px 0 0 5px;
+    right: 0;
+    border-radius: 5px 0 0 5px;
 }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -86,159 +86,193 @@ p {
 .next:hover,
 .modal-prev:hover,
 .modal-next:hover {
-	opacity: 1;
-	color: $primary;
-	// background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    color: $primary;
+    // background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Number text (1/3 etc) */
 .numbertext {
-	color: #f2f2f2;
-	font-size: 12px;
-	padding: 8px 12px;
-	position: absolute;
-	top: 0;
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
 }
 
 /* Container for image text */
 .modal-caption,
 .caption-container {
-	font-family: "Roboto Condensed", sans-serif;
-	text-align: center;
-	background-color: $secondary;
-	padding: 2px 16px;
-	p {
-		color: $primary;
-	}
+    font-family: "Roboto Condensed", sans-serif;
+    text-align: center;
+    background-color: $secondary;
+    padding: 2px 16px;
+    p {
+        color: $primary;
+    }
 }
 
 /* Modal Caption text */
 .modal-caption {
-	margin-bottom: 20px;
-	font-size: 125%;
+    margin-bottom: 20px;
+    font-size: 125%;
 }
 
 .row:after {
-	content: "";
-	display: table;
-	clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /* Six columns side by side */
 .column {
-	float: left;
-	width: 20%;
-	margin-left: 1em;
+    float: left;
+    width: 20%;
+    margin-left: 1em;
 }
 
 /* Add a transparency effect for thumnbail images */
 .demo {
-	opacity: 0.6;
-	transition: 0.4s ease;
+    opacity: 0.6;
+    transition: 0.4s ease;
 }
 
 /* The Modal (background) */
 .modal {
-	display: none;
-	position: fixed;
-	z-index: 1;
-	padding-top: 50px;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: $secondary;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: $secondary;
 }
 
 /* Modal Content */
 .modal-content {
-	position: relative;
-	background-color: $secondary;
-	margin: auto;
-	padding: 0;
-	width: 90%;
-	max-width: 1300px;
+    position: relative;
+    background-color: $secondary;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1300px;
 }
 
 /* The Close Button */
 .close {
-	color: #999;
-	position: absolute;
-	top: 10px;
-	right: 25px;
-	font-size: 35px;
-	font-weight: bold;
-	transition: 0.2s ease;
+    color: #999;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.2s ease;
 }
 
 .close:hover,
 .close:focus {
-	color: $primary;
-	text-decoration: none;
-	cursor: pointer;
+    color: $primary;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /* Modal Next & previous buttons */
 .modal-prev,
 .modal-next {
-	top: 60%;
+    top: 60%;
 }
 
 // Built With skills
 #skills > ul {
-	list-style-type: none;
-	margin: 0;
-	margin-left: 1em;
-	padding: 0;
-	display: flex;
-	flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    margin-left: 1em;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
 
-	li {
-		background: $primary;
-		padding: 10px;
-		font-size: 16px;
-		margin-right: 10px;
-		width: auto;
-		height: auto;
-		margin-bottom: 1em;
-		display: flex;
-		flex-direction: column;
-		color: black;
-		border-radius: 8px;
-		transition: 0.2s ease;
-	}
+    li {
+        background: $primary;
+        padding: 10px;
+        font-size: 16px;
+        margin-right: 10px;
+        width: auto;
+        height: auto;
+        margin-bottom: 1em;
+        display: flex;
+        flex-direction: column;
+        color: black;
+        border-radius: 8px;
+        transition: 0.2s ease;
+    }
 
-	// li:hover {
-	// 	background: darken($primary, 25%);
-	// 	font-weight: bolder;
-	// }
+    // li:hover {
+    // 	background: darken($primary, 25%);
+    // 	font-weight: bolder;
+    // }
 }
 
 #github {
-	margin-left: 1em;
-	transition: 0.2s ease;
+    margin-left: 1em;
+    transition: 0.2s ease;
 
-	&:link,
-	&:visited {
-		background-color: $secondary;
-		border-color: $primary;
-		border-style: solid;
-		border-width: 2px;
-		color: white;
-		padding: 12px 21px;
-		text-align: center;
-		text-decoration: none;
-		display: inline-block;
-	}
+    &:link,
+    &:visited {
+        background-color: $secondary;
+        border-color: $primary;
+        border-style: solid;
+        border-width: 2px;
+        color: white;
+        padding: 12px 21px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
 
-	&:hover {
-		background-color: $primary;
-		color: black;
-		font-weight: bold;
-	}
+    &:hover {
+        background-color: $primary;
+        color: black;
+        font-weight: bold;
+    }
 
-	&:active {
-		background-color: darken($primary, 10%);
-	}
+    &:active {
+        background-color: darken($primary, 10%);
+    }
+}
+
+#mobilePageExtender {
+    display: none;
+}
+
+// MAX WIDTH: 1300px =========================================================
+@media screen and (max-width: 1300px) {
+    .clearfix {
+        position: relative;
+    }
+    .box {
+        width: 100%;
+        padding: 20px;
+    }
+    .text {
+        font-size: 17px;
+    }
+    #mobilePageExtender {
+        display: inline;
+    }
+    .githubContainer {
+        text-align: center;
+        #github {
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 500px){
+    .modal-prev,
+    .modal-next {
+        top: 70%;
+    }
 }

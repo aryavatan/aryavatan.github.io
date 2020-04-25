@@ -58,7 +58,7 @@
     <div class="box">
         <h2>{{project.name}}</h2>
         <h3>Description</h3>
-        <p>{{project.description}}</p>
+        <p class="text">{{project.description}}</p>
         
         <div id="skills">
             <h3>Built With:</h3>
@@ -68,10 +68,13 @@
         </div>
         <div>
             <h3>Want To Learn More?</h3>
-            <p>Visit the open source GitHub repository for this project:</p>
+            <p class="text">Visit the open source GitHub repository for this project:</p>
         </div>
-        <div>
+        <div class="githubContainer">
             <a id="github" href="{{project.github}}" target="_blank">Here</a>
+        </div>
+        <div id="mobilePageExtender">
+            <br><br><br><br>
         </div>
     </div>
 
