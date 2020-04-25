@@ -31,13 +31,6 @@ body {
     padding: 20px;
 }
 
-/* Center website */
-.main {
-    // max-width: 1400px;
-    // margin-left: 1em;
-    // margin: auto;
-}
-
 .row {
     margin: 8px -16px;
 }
@@ -132,12 +125,6 @@ body {
     }
 }
 
-// Indent projects so they're not lined up with header
-@media screen and (max-width: 1800px) {
-    .main {
-        // margin-left: 1em;
-    }
-}
 
 /* Responsive layout - makes a three column-layout instead of four columns */
 @media screen and (max-width: 1350px) {
@@ -160,5 +147,16 @@ body {
     }
     .column {
         width: 100%;
+    }
+}
+
+// Make filters more visually appealing
+@media screen and (max-width: 500px) {
+    .filters-list > ul {
+        align-items: center;
+        justify-content: center;
+        li{
+            padding: 12px;
+        }
     }
 }
