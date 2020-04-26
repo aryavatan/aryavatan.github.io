@@ -1,24 +1,45 @@
-//https://www.w3schools.com/howto/howto_css_timeline.asp
-//https://freefrontend.com/css-timelines/
 //https://codepen.io/ksantangelo/pen/ZBOpoJ/
-$primary:rgb(152, 230, 152);
+$primary: rgb(152, 230, 152);
 $secondary: rgb(29, 31, 32);
 
-$gutter: 50px;
+$container-shadow: 0.5rem 0.5rem 2rem 0 rgba(black, 0.2);
+
+$gutter: 30px;
 $border-width: 4px;
 $dot-diameter: 8px;
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 12vh 100px;
+    font-weight: 300;
+    // color: #333;
+    box-sizing: border-box;
+    * {
+        box-sizing: border-box;
+    }
+}
 
 .timeline {
-    width:1000px;
-    max-width: 1000px;
-    background:$secondary;
+    width: 100%;
+    max-width: 1300px;
+    background: $secondary;
     padding: 100px 50px;
     position: relative;
+    // box-shadow: $container-shadow;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
     &:before {
-        content: '';
+        content: "";
         position: absolute;
-        top: 30px;
-        left:calc(33% + 15px); 
+        top: 0px;
+        left: calc(20% + 58px); //$gutter/2
         bottom: 0px;
         width: $border-width;
         background: white;
@@ -27,7 +48,7 @@ $dot-diameter: 8px;
         content: "";
         display: table;
         clear: both;
-    } 
+    }
 }
 
 .entry {
@@ -35,21 +56,20 @@ $dot-diameter: 8px;
     text-align: left;
     position: relative;
     .title {
-        margin-bottom: .5em;
+        margin-bottom: 0.5em;
         float: left;
-        width: 28%;
-        // left:calc(-3%); //$gutter/2
+        width: 20%;
         padding-right: $gutter;
         text-align: right;
         position: relative;
         &:before {
-            content: '';
+            content: "";
             position: absolute;
             width: $dot-diameter;
             height: $dot-diameter;
             border: $border-width solid $primary;
             background-color: $secondary;
-            border-radius:100%;
+            border-radius: 100%;
             top: 15%;
             right: -$dot-diameter;
             z-index: 99;
@@ -58,24 +78,24 @@ $dot-diameter: 8px;
             margin: 0;
             font-size: 140%;
             color: $primary;
-            font-family: 'Roboto Condensed', sans-serif;
+            font-family: "Roboto Condensed", sans-serif;
         }
         p {
             margin: 0;
             font-size: 100%;
             color: white;
-            font-family: 'Roboto Condensed', sans-serif;
+            font-family: "Roboto Condensed", sans-serif;
             a {
-                text-decoration:none;
+                text-decoration: none;
                 color: $primary;
-                font-family: 'Roboto Condensed', sans-serif;
+                font-family: "Roboto Condensed", sans-serif;
             }
         }
     }
     .body {
         margin: 0 0 3em;
         float: right;
-        width: 62%;
+        width: 75%;
         padding-left: $gutter;
         p {
             line-height: 1.4em;
@@ -84,16 +104,93 @@ $dot-diameter: 8px;
                 font-weight: 400;
             }
             color: white;
-            font-family: 'Roboto Condensed', sans-serif;
+            font-family: "Roboto Condensed", sans-serif;
         }
         ul {
-            font-family: 'Roboto Condensed', sans-serif;    
-            color:#aaa;
-            padding-left: 2em;
+            font-family: "Roboto Condensed", sans-serif;
+            color: #aaa;
+            padding-left: 0;
             list-style-type: disc;
+            margin-left: 2em;
+
             li {
                 padding-bottom: 6px;
+                &:before {
+                    margin-right: 0.5em;
+                }
             }
         }
+    }
+}
+
+// Stop body from getting pushed down
+@media screen and (max-width: 1499px) {
+    .entry .body {
+        width: 73%;
+    }
+}
+
+// Make font size all around smaller
+@media screen and (max-width: 1186px) {
+    .entry {
+        .title {
+            h3 {
+                font-size: 130%;
+            }
+            p {
+                font-size: 17px;
+            }
+        }
+        .body {
+            p,
+            li {
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+// Navbar converts to hamburger sidemenu
+@media screen and (max-width: 1150px) {
+    .timeline {
+        padding: 100px 10px;
+        &:before {
+            left: calc(25% + 33px);
+        }
+    }
+    .entry {
+        .title {
+            width: 25%;
+        }
+        .body {
+            width: 66%;
+        }
+    }
+}
+
+// Make font size all around smaller
+@media screen and (max-width: 881px) {
+    .entry {
+        .title {
+            h3 {
+                font-size: 120%;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+        .body {
+            p,
+            li {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+// Navbar converts to hamburger sidemenu
+@media screen and (max-width: 1150px) {
+    .entry .body {
+        width: 66%; // Change width
     }
 }
