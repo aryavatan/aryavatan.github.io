@@ -4,8 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
-    "build": "ng build --prod --output-path docs --base-href /Arya-Resume/",
-    "build2": "ng build --prod --base-href=\"aryavatan.github.io\"",
+    "build": "ng build --prod --output-path docs --base-href /Portfolio/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
