@@ -12,11 +12,58 @@
         "React",
         "Angular"
     ],
+    "experiences":[
+        {
+            "title": "Software Developer Intern",
+            "employer": "BBS Securities Inc.",
+            "employerSite": "https://www.bbssecurities.com/",
+            "dates": "May - August, 2019",
+            "summary": "Returning to BBS Securities for a second internship, I was able to have more responsibilities which resulted in a more rewarding experience for me. I took part in high level meetings and developed bigger and more important projects.",
+            "keyPoints": [
+                "Generated SQL queries and procedures to automate the process of modifying employee access/permissions",
+                "Developed a tool to enable traders to quickly send emails to various groups of clients about new issues and stocks",
+                "Worked on developing an automated stock purchasing system which significantly decreased incorrect manual purchases and clients complaints"
+            ]
+        },
+        {
+            "title": "Software Developer Intern",
+            "employer": "BBS Securities Inc.",
+            "employerSite": "https://www.bbssecurities.com/",
+            "dates": "May - August, 2018",
+            "summary": "Working as a software development intern at BBS Securities, I developed a strong work ethic, while also expanding my teamwork and problem-solving skills. I was also able to learn and work with new technologies like C#, .NET, and SQL.",
+            "keyPoints": [
+                "Developed an application to receive bank transfer files from BMO and save information to database",
+                "Redeveloped C++ legacy code into C# code to help company transition to new technologies"
+            ]
+        },
+        {
+            "title": "Founder",
+            "employer": "AVA Computer Upgrades",
+            "dates": "August 2016 - April 2018",
+            "summary": "Launching my first business taught me that success comes to those who are willing to work hard. I turned my passion of building and working on computers into a profitable business and learned a lot in the process.",
+            "keyPoints": [
+                "Repaired over 50 computer systems over ~2 years of operation",
+                "Accumulated over 2000 followers on social media using social media marketing techniques"
+            ]
+        },
+        {
+            "title": "Team Member (Front Counter)",
+            "employer": "Freshii",
+            "employerSite": "https://www.freshii.com/ca/en-ca/home",
+            "dates": "October 2015 - July 2016",
+            "summary": "This role helped shape me into the person I am today. I learned invaluable skills such as leadership, multi-tasking, humility, and patience as I moved up from the kitchen to the front counter to supervising operations during my shifts.",
+            "keyPoints": [
+                "Provided friendly and professional customer service",
+                "Fully trained 10 new team members in store operations",
+                "Supervised operations after demonstrating leadership and a positive attitude"
+            ]
+        }
+    ],
     "projects": [
         {
             "name": "Angular Sound",
             "id": "AngularSound",
-            "summary": "A music review site in which registered users can write reviews for songs",
+            "summary": "A music review site where users can write reviews for songs.",
             "description": "A full stack web application made with the Angular framework for the front-end, Node.js for the back-end server, and MongoDB for the database solution. This project is a music review (demo) site in which authenticated users write reviews for songs. Once a user has registered with the site, they are able to write reviews for any song.",
             "github": "https://github.com/aryavatan/Angular-Sound",
             "skills": [
@@ -69,6 +116,31 @@
                 {
                     "caption": "Private Group Chatroom",
                     "src": "assets/Projects/OSChatroom/2.PNG"
+                }
+            ]
+        },
+        {
+            "name": "Simple Sketchpad",
+            "id": "sketchpad",
+            "summary": "A simple sketchpad, similar to microsoft paint.",
+            "description": "A simple sketchpad, similar to microsoft paint, written in Java using the Java AWT library. In addition to freehand drawing, basic shapes can be drawn as well, such as rectangles, lines, and ellipes. The color of each object can be changed as well, from black, red, green, blue, and yellow. Lastly, there is a save and load feature to allow you to save your sketch and load it later on to keep working on it.",
+            "github": "https://github.com/aryavatan/SimpleSketchpad",
+            "skills": [
+                "Java"
+            ],
+            "icon":"assets/Projects/Sketchpad/shapes.PNG",
+            "pictures": [
+                {
+                    "caption": "Drawing With Shapes",
+                    "src": "assets/Projects/Sketchpad/shapes.PNG"
+                },
+                {
+                    "caption": "Saving Your Drawing",
+                    "src": "assets/Projects/Sketchpad/save.PNG"
+                },
+                {
+                    "caption": "Freehand Drawing",
+                    "src": "assets/Projects/Sketchpad/freehand.PNG"
                 }
             ]
         }
