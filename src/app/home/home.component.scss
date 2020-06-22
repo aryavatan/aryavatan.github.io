@@ -84,6 +84,50 @@ div#text {
     }
 }
 
+#shortcuts {
+    margin-top: 30px;
+    display: none;
+    width: auto;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            width: auto;
+            max-width: 300px;
+            height: 45px;
+            font-family: "Roboto", sans-serif;
+            font-size: 20px;
+            border: 2px solid $primary;
+            margin: 0 0 15px 0;
+            text-align: center;
+            color: $primary;
+            transition: 0.2s;
+            display: grid;
+            align-items: center;
+            
+            a {
+                color: inherit;
+                text-decoration: none;            
+            }
+
+            &:hover{
+                background-color: $primary;
+                color: black;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+#extraSpace {
+    display: none;
+}
+
 // MAX WIDTH: 2000px =========================================================
 @media screen and (max-width: 2000px) {
     img {
@@ -126,6 +170,16 @@ div#text {
     }
 }
 
+// MAX WIDTH: 1150px =========================================================
+@media screen and (max-width: 1150px) {
+    #shortcuts{
+        display: block;
+    }
+    #skills{
+        display: none;
+    }
+}
+
 // MAX WIDTH: 1130px =========================================================
 @media screen and (max-width: 1130px){
     #skills > ul > li {
@@ -147,6 +201,10 @@ div#text {
         padding: 8px;
         font-size: 16px;
     }
+    #shortcuts > ul > li {
+        font-size: 18px;
+        height: 40px;
+    }
 }
 
 // MAX WIDTH: 950px =========================================================
@@ -166,6 +224,14 @@ div#text {
     #skills > ul {
         margin-top: 30px;
     }
+    #shortcuts {
+        // margin-top: 0;
+
+        ul > li {
+            height: 35px;
+        }
+    }
+    
 }
 
 // MAX WIDTH: 725px =========================================================
@@ -193,5 +259,12 @@ div#text {
         li {
             padding: 16px;
         }
+    }
+    #shortcuts > ul > li {
+        font-size: 20px;
+        height: 50px;
+    }
+    #extraSpace {
+        display: block;
     }
 }
