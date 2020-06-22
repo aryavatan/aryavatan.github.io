@@ -76,8 +76,8 @@ div#text {
     }
 
     li:hover {
-        background: darken($primary, 25%);
         &.has-project {
+            background: darken($primary, 25%);
             font-weight: bolder;
             cursor: pointer;
         }
