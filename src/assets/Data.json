@@ -145,6 +145,34 @@
                     "src": "assets/Projects/Sketchpad/freehand.PNG"
                 }
             ]
+        },
+        {
+            "name": "aryavatan.ca",
+            "id": "aryavatan",
+            "summary": "My personal portfolio website, made with Angular.",
+            "description": "Wanting to increase my understanding of web development and Angular in specific, I created this personal portfolio website for myself. This site serves as a way for me to display my projects and skills in a creative and personal way.",
+            "github": "https://github.com/aryavatan/Portfolio",
+            "skills": [
+                "Angular",
+                "HTML",
+                "CSS",
+                "TypeScript"
+            ],
+            "icon":"assets/Projects/aryavatan.ca/Home.PNG",
+            "pictures": [
+                {
+                    "caption": "Home Page",
+                    "src": "assets/Projects/aryavatan.ca/Home.PNG"
+                },
+                {
+                    "caption": "Work Experience Page",
+                    "src": "assets/Projects/aryavatan.ca/WorkExperience.PNG"
+                },
+                {
+                    "caption": "Projects Page",
+                    "src": "assets/Projects/aryavatan.ca/Projects.PNG"
+                }
+            ]
         }
     ]
 }

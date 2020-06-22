@@ -18,7 +18,15 @@ export class ProjectsComponent implements OnInit {
 	constructor(private router: Router, private projectService: ProjectService) { }
 
 	ngOnInit() {
-		this.allProjects = data.projects;
+		this.allProjects = data.projects.sort((proj1, porj2) => {
+			if(proj1.name.toLowerCase() > porj2.name.toLowerCase()){
+				return 1;
+			}
+			if(proj1.name.toLowerCase() < porj2.name.toLowerCase()){
+				return -1
+			}
+			return 0;
+		});
 		this.projects = JSON.parse(JSON.stringify(this.allProjects)); // Make deep copy
 
 		this.getFilterSkills();  // Extract Skills from the projects
