@@ -45,12 +45,14 @@ p {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    max-width: 900px;
 
     li {
         background: $primary;
         padding: 18px;
         margin-right: 10px;
-        width: auto;
+        width: 100px;
+        text-align: center;
         height: auto;
         margin-bottom: 1em;
         display: flex;
@@ -61,8 +63,8 @@ p {
     }
 
     li:hover {
-        background: darken($primary, 25%);
         &.has-project {
+            background: darken($primary, 25%);
             font-weight: bolder;
             cursor: pointer;
         }
@@ -72,7 +74,7 @@ p {
 #awards > ul {
     list-style-type: none;
     margin-left: 0;
-    padding-left: 1em;
+    padding-left: 0;
 
     li {
         padding-bottom: 1em;
@@ -84,11 +86,22 @@ p {
 @media screen and (max-width: 1300px) {
     #profile {
         max-width: 98%;
+        p{
+            margin-left: 0;
+        }
+    }
+
+    #education p {
+        margin-left: 0;
     }
 
     #skills > ul {
+        margin-right: auto;
+        margin-left: auto;
+
         li {
             padding: 12px;
+            width: 80px;
 
             &:hover {
                 background: $primary;

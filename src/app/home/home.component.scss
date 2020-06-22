@@ -61,11 +61,15 @@ div#text {
     display: flex;
     flex-wrap: wrap;
 
+   
+
     li {
         background: $primary;
         padding: 1em;
         margin-right: 10px;
         width: auto;
+        width: 120px;
+        text-align: center;
         height: auto;
         margin-bottom: 1em;
         display: flex;
@@ -153,18 +157,17 @@ div#text {
     }
 }
 
-// MAX WIDTH: 1430px =========================================================
-@media screen and (max-width: 1430px) {
+// MAX WIDTH: 1500px =========================================================
+@media screen and (max-width: 1500px) {
     img{
         margin: auto;
     }
-    #skills > ul > li {
-        padding: 15px;
+    #skills > ul {
+        margin-top: 1.4em;
+        li {
+            padding: 10px;
+        }
     }
-}
-
-// MAX WIDTH: 1250px =========================================================
-@media screen and (max-width: 1250px){
     .box {
         padding: 0px;
     }
