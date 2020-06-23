@@ -162,14 +162,18 @@ div#text {
     img{
         margin: auto;
     }
-    #skills > ul {
-        margin-top: 1.4em;
-        li {
-            padding: 10px;
-        }
-    }
     .box {
         padding: 0px;
+    }
+}
+
+// MAX WIDTH: 1300px =========================================================
+@media screen and (max-width: 1300px) {
+    #skills > ul {
+        margin-top: 1.4em;
+        li{
+            padding: 12px;
+        }
     }
 }
 
