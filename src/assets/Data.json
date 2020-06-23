@@ -16,6 +16,18 @@
     ],
     "experiences":[
         {
+            "title": "Coop Developer",
+            "employer": "Indigo Books and Music",
+            "employerSite": "https://www.chapters.indigo.ca/en-ca/",
+            "dates": "May - August, 2020",
+            "summary": "Currently working at Indigo with a super talented team on the search engine of Indigo's website. I'm very lucky to be mentored by some amazing developers at Indigo.",
+            "keyPoints": [
+                "Using technologies like ASP.NET and React to update and maintain Indigo.ca",
+                "Developing new features such as search breadcrumbs to improve the search and browsing experience on Indigo.ca",
+                "Fixing bugs related to: navigation, styling, and product searching"
+            ]
+        },
+        {
             "title": "Software Developer Intern",
             "employer": "BBS Securities Inc.",
             "employerSite": "https://www.bbssecurities.com/",
