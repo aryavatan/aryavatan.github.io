@@ -71,7 +71,6 @@ body {
     }
 
     &:hover {
-        border-color: black;
         cursor: pointer;
         background-color: darken($primary, 10%);
         background-color: $primary;
@@ -85,6 +84,7 @@ body {
     }
 
     &:active {
+        border-color: black;
         background-color: darken($primary, 20%);
     }
 }
@@ -98,10 +98,11 @@ body {
     li {
         font-size: 17px;
         background-color: lighten($secondary, 10%);
-        padding: 1em;
+        padding: 12px;
         margin-right: 10px;
-        width: auto;
+        width: 100px;
         height: auto;
+        text-align: center;
         margin-bottom: 1em;
         display: flex;
         flex-direction: column;
@@ -117,13 +118,14 @@ body {
     li:hover {
         background-color: $primary;
         color: black;
-        border-color: black;
+        border-color: $primary;
         font-weight: bolder;
         cursor: pointer;
     }
 
     li:active {
-        background-color: darken($primary, 20%);
+        border-color: $secondary;
+        background-color: darken($primary, 30%);
     }
 }
 
@@ -157,8 +159,5 @@ body {
     .filters-list > ul {
         align-items: center;
         justify-content: center;
-        li{
-            padding: 12px;
-        }
     }
 }
