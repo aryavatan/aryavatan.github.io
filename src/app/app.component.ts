@@ -20,7 +20,7 @@ export class AppComponent implements OnDestroy {
 		this.subscription = router.events.subscribe((event) => {
 			if (event instanceof NavigationStart) {  // AFTER BROWSER REFRESH
 				browserRefresh = !router.navigated;
-				console.log("Refreshed");
+				window.scrollTo(0, 0);
 			}
 		});
 	}
