@@ -74,7 +74,7 @@ p {
 #awards > ul {
     list-style-type: none;
     margin-left: 0;
-    padding-left: 0;
+    padding-left: 1em;
 
     li {
         padding-bottom: 1em;
@@ -88,6 +88,13 @@ p {
         max-width: 98%;
         p{
             margin-left: 0;
+        }
+    }
+
+    #awards {
+        padding-left: 0;
+        ul {
+            padding-left: 0;
         }
     }
 
