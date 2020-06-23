@@ -10,9 +10,23 @@
         "CSS",
         "Node.js",
         "React",
-        "Angular"
+        "Angular",
+        "Flutter",
+        "Dart"
     ],
     "experiences":[
+        {
+            "title": "Coop Developer",
+            "employer": "Indigo Books and Music",
+            "employerSite": "https://www.chapters.indigo.ca/en-ca/",
+            "dates": "May - August, 2020",
+            "summary": "Currently working at Indigo with a super talented team on the search engine of Indigo's website. I'm very lucky to be mentored by some amazing developers at Indigo.",
+            "keyPoints": [
+                "Using technologies like ASP.NET and React to update and maintain Indigo.ca",
+                "Developing new features such as search breadcrumbs to improve the search and browsing experience on Indigo.ca",
+                "Fixing bugs related to: navigation, styling, and product searching"
+            ]
+        },
         {
             "title": "Software Developer Intern",
             "employer": "BBS Securities Inc.",
@@ -141,6 +155,34 @@
                 {
                     "caption": "Freehand Drawing",
                     "src": "assets/Projects/Sketchpad/freehand.PNG"
+                }
+            ]
+        },
+        {
+            "name": "aryavatan.ca",
+            "id": "aryavatan",
+            "summary": "My personal portfolio website, made with Angular.",
+            "description": "Wanting to increase my understanding of web development and Angular in specific, I created this personal portfolio website for myself. This site serves as a way for me to display my projects and skills in a creative and personal way.",
+            "github": "https://github.com/aryavatan/Portfolio",
+            "skills": [
+                "Angular",
+                "HTML",
+                "CSS",
+                "TypeScript"
+            ],
+            "icon":"assets/Projects/aryavatan.ca/Home.PNG",
+            "pictures": [
+                {
+                    "caption": "Home Page",
+                    "src": "assets/Projects/aryavatan.ca/Home.PNG"
+                },
+                {
+                    "caption": "Work Experience Page",
+                    "src": "assets/Projects/aryavatan.ca/WorkExperience.PNG"
+                },
+                {
+                    "caption": "Projects Page",
+                    "src": "assets/Projects/aryavatan.ca/Projects.PNG"
                 }
             ]
         }
