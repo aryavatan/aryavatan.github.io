@@ -74,6 +74,10 @@ $dot-diameter: 8px;
                 text-decoration: none;
                 color: $primary;
                 font-family: "Roboto Condensed", sans-serif;
+
+                &:hover {
+                   text-decoration: underline; 
+                }
             }
         }
     }
