@@ -45,11 +45,18 @@ header {
                 // font-family: 'Roboto Condensed', sans-serif;
                 padding: 1em;
                 transition: 0.2s ease;
+                
+                &.selected {
+                   color: $primary; 
+                }
 
                 &:hover {
                     background: darken($primary, 10%);
                     color: black;
+                    font-weight: bold;
+                    font-size: 110%;
                 }
+
             }
         }
     }
