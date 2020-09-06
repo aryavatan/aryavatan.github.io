@@ -1,5 +1,5 @@
 import { Component, OnDestroy, Inject} from '@angular/core';
-import { NavigationStart, Router, NavigationEnd } from '@angular/router';
+import { NavigationStart, Router, NavigationEnd, NavigationCancel } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { DOCUMENT } from '@angular/common'; 
 
@@ -25,6 +25,11 @@ export class AppComponent implements OnDestroy {
             }
             
             if (event instanceof NavigationEnd) {  // AFTER Navigation
+                this.enableActiveNavButton(true);
+            }
+
+            // Changing project filters causes the query params to change and this causes a NavigationCancel instead of NavigationEnd
+            if (event instanceof NavigationCancel && event.url.includes('projects')) {
                 this.enableActiveNavButton(true);
             }
         });

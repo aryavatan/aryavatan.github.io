@@ -31,8 +31,14 @@ export class HomeComponent implements OnInit {
 	// If skill that has projects is clicked, route to projects w/ that skill as the filter
 	skillClicked(skill){
 		if(skill.class == "has-project"){
-			localStorage.setItem('filter', skill.name);
-			this.router.navigate(['/projects']);
+			this.router.navigate(
+                ['/projects'],
+                { 
+                    queryParams: { 
+                        filter: skill.name
+                    }, 
+                }
+            );
 		}
 	}
 
