@@ -6,8 +6,6 @@ import data from "../assets/Data.json";
 })
 export class ProjectService {
 
-	selectedProject: any;
-
 	constructor() { }
 
     // Gets all projects, sorted alphabetically
@@ -25,18 +23,22 @@ export class ProjectService {
 
     // Gets entire project from a project id
     getProject (projectId) {
+        let selectedProject;
+
         data.projects.forEach(project => {
             if(project.id === projectId) {
-                this.selectedProject = project;
+                selectedProject = project;
             }
         });
 
-        for (let i = 0; i < this.selectedProject.pictures.length; i++) {
-			this.selectedProject.pictures[i].show = "none";
-			this.selectedProject.pictures[i].opacity = 0.6;
+        if(!selectedProject) return;
+
+        for (let i = 0; i < selectedProject.pictures.length; i++) {
+			selectedProject.pictures[i].show = "none";
+			selectedProject.pictures[i].opacity = 0.6;
         }
         
-        return this.selectedProject;
+        return selectedProject;
     }
 
     // Gets list of projects based on filter name
