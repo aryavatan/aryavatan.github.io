@@ -86,7 +86,9 @@
                 "HTML",
                 "CSS",
                 "JavaScript",
-                "Node.js",
+                "Node.js"
+            ],
+            "secondarySkills" : [
                 "MongoDB"
             ],
             "icon":"assets/Projects/AngularSound/2.PNG",
