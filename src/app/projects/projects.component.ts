@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import data from "../../assets/Data.json";
 import { ProjectService } from '../project.service';
 
 @Component({
