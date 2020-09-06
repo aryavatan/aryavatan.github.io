@@ -46,7 +46,13 @@ export class AppComponent implements OnDestroy {
     // Alternatively, it will disable the primary color of all nav buttons
     enableActiveNavButton(enable) {
         if (enable) {
-            const id = window.location.pathname.replace('/','');
+            let id = window.location.pathname.replace('/','');
+
+            // Edge cases:
+            id = id === 'projects/project-details' ? 'projects' : id;
+
+            // "projects/project-details" = projects
+
             let navButton = document.getElementById(id ? id : 'home');
             navButton.setAttribute('class', 'selected');
         }
