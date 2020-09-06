@@ -49,9 +49,7 @@ export class AppComponent implements OnDestroy {
             let id = window.location.pathname.replace('/','');
 
             // Edge cases:
-            id = id === 'projects/project-details' ? 'projects' : id;
-
-            // "projects/project-details" = projects
+            id = id.includes('projects') ? 'projects' : id;
 
             let navButton = document.getElementById(id ? id : 'home');
             navButton.setAttribute('class', 'selected');

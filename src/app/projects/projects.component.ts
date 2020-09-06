@@ -44,8 +44,7 @@ export class ProjectsComponent implements OnInit {
 	}
 
 	projectClicked(project) {
-		this.projectService.setSelectedProject(project);
-		this.router.navigate(['projects/project-details']);
+		this.router.navigate(['/projects', project.id]);
 	}
 
 	getFilterSkills() {

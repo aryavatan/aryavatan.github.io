@@ -11,34 +11,21 @@ export class ProjectService {
 
 	constructor() { }
 
-	setSelectedProject(project) {
-		this.selectedProject = project;
-		localStorage.setItem('project', project.id);
-	}
+    // Gets entire project from a project id
+    getProject (projectId) {
+        data.projects.forEach(project => {
+            if(project.id === projectId) {
+                this.selectedProject = project;
+            }
+        });
 
-	getSelectedProject() {
-		if (this.selectedProject == undefined) {
-			let id = localStorage.getItem('project');
-			data.projects.forEach(project => {
-				if (project.id == id) {
-					this.selectedProject = project;
-				}
-			})
-		}
-
-		for (let i = 0; i < this.selectedProject.pictures.length; i++) {
+        for (let i = 0; i < this.selectedProject.pictures.length; i++) {
 			this.selectedProject.pictures[i].show = "none";
 			this.selectedProject.pictures[i].opacity = 0.6;
-		}
-		return this.selectedProject;
-	}
-
-	getSelectedProjectObservable() {
-		return new Observable(observer => {
-			observer.next(this.getSelectedProject());
-			observer.complete();
-		})
-	}
+        }
+        
+        return this.selectedProject;
+    }
 
 	// Generate and return a list of filters for projects
 	getFilterSkills() {

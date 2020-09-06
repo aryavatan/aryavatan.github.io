@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ProjectService } from '../project.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
 	selector: 'app-project-details',
@@ -15,30 +15,27 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
 	showModal: string;
 	skills: Object;
 
-	constructor(private router: Router, private projectService: ProjectService) { }
+	constructor(private router: Router, private route: ActivatedRoute, private projectService: ProjectService) { }
 	
 	ngOnDestroy(): void {
 		localStorage.removeItem('project');
 	}
 
 	ngOnInit() {		
-		this.projectService.getSelectedProjectObservable().subscribe(value => {
-			this.project = value;
-			localStorage.setItem('project', this.project.id);  // reset local storage incase they backstep to this page after ng destory
-
-			// The rest of these should only be executed after project is found
-			this.skills = this.getProjectSkills();
-			this.slideIndex = 0;
-			this.showModal = "none";
-			this.showSlides(this.slideIndex);
-		});
-
-		// Block direct URL access if not project is selected
-		setTimeout(() => {
-			if(this.project == undefined){  
-				this.router.navigate(['/projects']);
-			}
-		}, 100);
+        // Get correct project from projectService
+        let projectId = this.route.snapshot.paramMap.get('id');
+        this.project = this.projectService.getProject(projectId);
+        
+		// Block direct URL access if selected project not found
+        if(this.project == undefined){  
+            this.router.navigate(['/projects']);
+            return;
+        }
+        
+        this.skills = this.getProjectSkills();
+        this.slideIndex = 0;
+        this.showModal = "none";
+        this.showSlides(this.slideIndex);
     }
     
     // Gets all the skills of the project to display
