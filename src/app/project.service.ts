@@ -10,6 +10,19 @@ export class ProjectService {
 
 	constructor() { }
 
+    // Gets all projects, sorted alphabetically
+    getAllProjects() {
+        return data.projects.sort((proj1, porj2) => {
+			if(proj1.name.toLowerCase() > porj2.name.toLowerCase()){
+				return 1;
+			}
+			if(proj1.name.toLowerCase() < porj2.name.toLowerCase()){
+				return -1
+			}
+			return 0;
+		});
+    }
+
     // Gets entire project from a project id
     getProject (projectId) {
         data.projects.forEach(project => {
@@ -24,6 +37,22 @@ export class ProjectService {
         }
         
         return this.selectedProject;
+    }
+
+    // Gets list of projects based on filter name
+    getFilteredProjects(filterName) {
+        if (filterName == ''){
+            return this.getAllProjects();
+        }
+        
+        // Get projects that match filter from master list
+		let filteredProjects  = [];
+		this.getAllProjects().forEach(project => {
+			if(project.skills.includes(filterName)){
+				filteredProjects.push(project);
+			}
+		});
+		return filteredProjects;
     }
 
 	// Generate and return a list of filters for projects

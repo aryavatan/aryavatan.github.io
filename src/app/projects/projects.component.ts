@@ -19,15 +19,7 @@ export class ProjectsComponent implements OnInit {
 
 	ngOnInit() {
         // Initialize and order projects alphabetically
-		this.allProjects = data.projects.sort((proj1, porj2) => {
-			if(proj1.name.toLowerCase() > porj2.name.toLowerCase()){
-				return 1;
-			}
-			if(proj1.name.toLowerCase() < porj2.name.toLowerCase()){
-				return -1
-			}
-			return 0;
-		});
+		this.allProjects = this.projectService.getAllProjects();
         this.projects = JSON.parse(JSON.stringify(this.allProjects)); // Make deep copy
 
         // Extract Skills from the projects to create the filters
@@ -88,23 +80,7 @@ export class ProjectsComponent implements OnInit {
 		this.selectedFilter.class = "selected";
 
 		// Get projects that match filter
-		this.projects = this.getFilteredProjects(filter.name);  // Assign to data-binded projects variable
-    }
-
-    // Gets list of projects based on filter name
-    getFilteredProjects(filterName) {
-        if (filterName == ''){
-            return JSON.parse(JSON.stringify(this.allProjects));
-        }
-        
-        // Get projects that match filter from master list
-		let filteredProjects  = [];
-		this.allProjects.forEach(project => {
-			if(project.skills.includes(filterName)){
-				filteredProjects.push(project);
-			}
-		});
-		return filteredProjects;
+		this.projects = this.projectService.getFilteredProjects(filter.name);  // Assign to data-binded projects variable
     }
     
     // Update the query parameters in the URL for the selected filter
