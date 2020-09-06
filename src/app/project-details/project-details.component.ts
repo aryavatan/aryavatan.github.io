@@ -27,7 +27,7 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
 			localStorage.setItem('project', this.project.id);  // reset local storage incase they backstep to this page after ng destory
 
 			// The rest of these should only be executed after project is found
-			this.skills = this.project.skills;
+			this.skills = this.getProjectSkills();
 			this.slideIndex = 0;
 			this.showModal = "none";
 			this.showSlides(this.slideIndex);
@@ -39,7 +39,18 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
 				this.router.navigate(['/projects']);
 			}
 		}, 100);
-	}
+    }
+    
+    // Gets all the skills of the project to display
+    getProjectSkills() {
+        let skills = this.project.skills;
+        
+        if (this.project.secondarySkills) {
+            return skills.concat(this.project.secondarySkills);
+        }
+
+        return skills;
+    }
 
 	plusSlides(n){
 		this.showSlides(this.slideIndex += n);
