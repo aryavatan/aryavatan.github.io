@@ -26,7 +26,6 @@ export class ProjectsComponent implements OnInit {
         
         // Subscribe to filter query param changes
         this.route.queryParams.subscribe(params => {
-            console.log(params.filter); 
             if(params.filter) {
                 // Block unrecognized filters
                 if (this.filters.filter(e => e.name == params.filter).length == 0) {

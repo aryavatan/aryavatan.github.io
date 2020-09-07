@@ -7,6 +7,7 @@ import { ExperienceComponent } from './experience/experience.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -14,7 +15,8 @@ const routes: Routes = [
     { path: 'experience', component: ExperienceComponent },
     { path: 'projects', component: ProjectsComponent },
     { path: 'projects/:id', component: ProjectDetailsComponent },
-    { path: 'contact', component: ContactComponent }
+    { path: 'contact', component: ContactComponent },
+    { path: '**', component: PageNotFoundComponent },  // Wildcard route for a 404 page
 ];
 
 @NgModule({

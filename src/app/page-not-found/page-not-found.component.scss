@@ -1,0 +1,73 @@
+$primary: rgb(152, 230, 152);
+$secondary: rgb(29, 31, 32);
+
+.content {
+    text-align: center;
+}
+
+h1 {
+    font-family: "Roboto Condensed", sans-serif;
+    color: $primary;
+    font-size: 250%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+    color: white;
+    margin-bottom: 60px;
+    max-width: 500px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    color: $primary;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+iframe {
+    border: solid;
+    border-color: $primary;
+    border-width: 3px;
+    border-radius: 10px;
+}
+
+/////////////////////////////////////////////////////
+
+@media screen and (max-width: 900px) {
+    h1 {
+        font-size: 200%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    iframe {
+        width: 360px;
+        height: 202.5px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    iframe {
+        width: 270px;
+        height: 152px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    iframe {
+        width: 240px;
+        height: 135px;
+    }
+    h1, p {
+        margin-bottom: 30px;
+    }
+}
