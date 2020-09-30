@@ -159,5 +159,21 @@ body {
     .filters-list > ul {
         align-items: center;
         justify-content: center;
+
+        li:hover {
+            background-color: lighten($secondary, 10%);
+            color: white;
+            border-color: $primary;
+            transition: 0.2s ease;
+            font-weight: normal;
+        }
+
+        li.selected {
+            background-color: $primary;
+            color: black;
+            border-color: $primary;
+            font-weight: bolder;
+            cursor: pointer;
+        }
     }
 }
