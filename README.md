@@ -8,7 +8,11 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 
 ## Building
 
-Run `npm run build` to build the website. Navigate to the `docs` folder and duplicate `index.html` and rename it to `404.html`. Additionally make sure there is a file named `CNAME` in the `docs` folder which contain only one line: `aryavatan.ca`
+1. Run `npm run build` to build the website
+
+2. Navigate to the `docs` folder and duplicate `index.html` and rename it to `404.html` 
+
+3. Additionally make sure there is a file named `CNAME` in the `docs` folder which contain only one line: `aryavatan.ca`
 
 ## Live Site
 
