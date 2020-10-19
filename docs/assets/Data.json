@@ -128,10 +128,6 @@
                 {
                     "caption": "Chatroom",
                     "src": "assets/Projects/OSChatroom/1.PNG"
-                },
-                {
-                    "caption": "Private Group Chatroom",
-                    "src": "assets/Projects/OSChatroom/2.PNG"
                 }
             ]
         },
@@ -185,6 +181,35 @@
                 {
                     "caption": "Projects Page",
                     "src": "assets/Projects/aryavatan.ca/Projects.PNG"
+                }
+            ]
+        },
+        {
+            "name": "Pacman Search",
+            "id": "PacmanSearch",
+            "summary": "Pacman uses search algorithms to efficiently determine a path to his goal",
+            "description": "In this project, the Pacman agent can find paths through his maze world, both to reach a particular location and to collect food efficiently. The Pacman agent uses general search algorithms (informed and uninformed) to efficiently determine a path to his goal. The search algorithms implemented in this project are: depth-first search, breadth-first search, uniform-cost search, and A* search. I found this project on Berkeley University's AI material while working through my own AI course at university.",
+            "github": "https://github.com/aryavatan/PacmanSearch",
+            "skills": [
+                "Python"
+            ],
+            "icon":"assets/Projects/PacmanSearch/1.PNG",
+            "pictures": [
+                {
+                    "caption": "Uniform-Cost Search (Avoiding Ghosts)",
+                    "src": "assets/Projects/PacmanSearch/1.PNG"
+                },
+                {
+                    "caption": "Uniform-Cost Search (Prioritizing Food)",
+                    "src": "assets/Projects/PacmanSearch/2.PNG"
+                },
+                {
+                    "caption": "Depth-First Search",
+                    "src": "assets/Projects/PacmanSearch/3.PNG"
+                },
+                {
+                    "caption": "Breadth-First Search",
+                    "src": "assets/Projects/PacmanSearch/4.PNG"
                 }
             ]
         }
