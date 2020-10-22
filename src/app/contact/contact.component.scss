@@ -10,15 +10,25 @@ p {
     color: white;
 }
 
-.table {
-	display: table;   /* Allow the centering to work */
-	margin: 0 auto;
+.text{
+    text-align: center;
+}
+
+.content .col {
+    float: left;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+
+    img {
+        padding-right: 10px;
+    }
 }
 
 h3 {
     color: $primary;
     font-family: "Roboto Condensed", sans-serif;
-    font-size: 155%;
+    font-size: 200%;
 }
 
 ul {
@@ -35,15 +45,11 @@ ul {
     }
 
     li {
-        padding: 1em;
-        margin-right: 20px;
-        width: 200px;
-        height: auto;
-        margin-bottom: 1em;
+        padding: 15px;
+        margin: 10px;
+        width: 240px;
+        height: 110px;
         display: flex;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
         border: solid;
         border-width: 2px;
         border-color: #aaa;
@@ -68,5 +74,65 @@ ul {
     li:hover{
         background: lighten($secondary, 10%);
         border-color: $primary;
+    }
+}
+
+#email li {
+    width: 335px;
+}
+
+// RESPONSIVE CODE ============================================
+
+@media screen and (max-width: 1300px) {
+    #mobilePageExtender {
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 490px){
+    #email li {
+        width: auto;
+        height: auto;
+        
+        div.col{
+            display: contents;
+
+            padding: 0px;
+            margin-left: auto;
+            margin-right: auto;
+
+            img, p, h3 {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 350px){
+    ul li {
+        width: 120px;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        
+        div.col{
+            display: contents;
+
+            padding: 0px;
+            margin-left: auto;
+            margin-right: auto;
+
+            img, p, h3 {
+                padding: 0;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+            }
+        }
     }
 }
