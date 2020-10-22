@@ -51,7 +51,7 @@ header {
                 }
 
                 &:hover {
-                    background: darken($primary, 10%);
+                    background: $primary;
                     color: black;
                     font-weight: bold;
                     font-size: 110%;

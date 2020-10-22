@@ -45,6 +45,7 @@ ul {
     }
 
     li {
+        background-color: lighten($secondary, 10%);
         padding: 15px;
         margin: 10px;
         width: 240px;
@@ -52,7 +53,7 @@ ul {
         display: flex;
         border: solid;
         border-width: 2px;
-        border-color: #aaa;
+        border-color: $primary;
         border-radius: 10px;
         overflow: hidden;
         transition: 0.3s ease;
@@ -69,11 +70,26 @@ ul {
             margin: 0;
         }
 
+        div.dark{
+            display: none;
+        }
+
     }
 
     li:hover{
-        background: lighten($secondary, 10%);
-        border-color: $primary;
+        background-color: $primary;
+        border-color: $secondary;
+        h3, p {
+            color: black;
+        }
+
+        div.light{
+            display: none;
+        }
+        div.dark{
+            display: block;
+            float: left;
+        }
     }
 }
 
