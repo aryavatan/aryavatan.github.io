@@ -56,23 +56,40 @@
     </div>
 
     <div class="box">
+        <!-- Name and Description -->
         <h2>{{project.name}}</h2>
         <h3>Description</h3>
         <p class="text">{{project.description}}</p>
         
+        <!-- Built With -->
         <div id="skills">
-            <h3>Built With:</h3>
+            <h3>Built With</h3>
             <ul *ngIf="skills">
                 <li *ngFor="let skill of skills">{{ skill }}</li>
             </ul>
         </div>
-        <div>
+
+        <!-- itch.io Link -->
+        <div *ngIf="project.itchio">
+            <h3>Download and Play</h3>
+            <p class="text">Visit the <b>itch.io</b> page for this game to download and play it for yourself!</p>
+            <div class="githubContainer">
+                <a id="github" href="{{project.itchio}}" target="_blank">Download</a>
+            </div>
+        </div>
+        <div id="mobilePageExtender">
+            <br><br><br><br>
+        </div>
+        
+        <!-- GitHub Link -->
+        <div *ngIf="project.github">
             <h3>Want To Learn More?</h3>
-            <p class="text">Visit the open source GitHub repository for this project:</p>
+            <p class="text">Visit the open source GitHub repository for this project!</p>
+            <div class="githubContainer">
+                <a id="github" href="{{project.github}}" target="_blank">GitHub</a>
+            </div>
         </div>
-        <div class="githubContainer">
-            <a id="github" href="{{project.github}}" target="_blank">Here</a>
-        </div>
+
         <div id="mobilePageExtender">
             <br><br><br><br>
         </div>
