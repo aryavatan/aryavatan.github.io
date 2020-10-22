@@ -1,6 +1,10 @@
 $primary: rgb(152, 230, 152);
 $secondary: rgb(29, 31, 32);
 
+h2.responsiveTitle {
+    display: none;
+}
+
 h1,
 h2,
 h3 {
@@ -10,8 +14,9 @@ h3 {
 
 h2 {
     text-align: left;
-    text-decoration: underline;
     margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 190%;
 }
 
 p {
@@ -164,10 +169,8 @@ p {
 /* The Close Button */
 .close {
     color: #999;
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 35px;
+    float: right;
+    font-size: 60px;
     font-weight: bold;
     transition: 0.2s ease;
 }
@@ -208,11 +211,6 @@ p {
         border-radius: 8px;
         transition: 0.2s ease;
     }
-
-    // li:hover {
-    // 	background: darken($primary, 25%);
-    // 	font-weight: bolder;
-    // }
 }
 
 #github {
@@ -247,10 +245,16 @@ p {
     display: none;
 }
 
-// MAX WIDTH: 1300px =========================================================
+// Responsive =========================================================
 @media screen and (max-width: 1300px) {
     .clearfix {
         position: relative;
+        .responsiveTitle {
+            display: block;
+            text-decoration: none;
+            font-size: 190%;
+            margin-bottom: 10px;
+        }
     }
     .box {
         width: 100%;
@@ -262,11 +266,24 @@ p {
     #mobilePageExtender {
         display: inline;
     }
-    .githubContainer {
-        text-align: center;
-        #github {
-            margin-left: 0;
-        }
+    .image-container {
+        max-width: 600px;
+    }
+    .defaultTitle {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 1190px) {
+    .close {
+        // font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .close {
+        font-size: 50px;
     }
 }
 
