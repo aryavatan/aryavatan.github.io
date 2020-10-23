@@ -12,7 +12,8 @@
         "React",
         "Angular",
         "Flutter",
-        "Dart"
+        "Dart",
+        "Unity"
     ],
     "experiences":[
         {
@@ -187,7 +188,7 @@
         {
             "name": "Pacman Search",
             "id": "PacmanSearch",
-            "summary": "Pacman uses search algorithms to efficiently determine a path to his goal",
+            "summary": "Pacman uses search algorithms to efficiently determine a path to his goal.",
             "description": "In this project, the Pacman agent can find paths through his maze world, both to reach a particular location and to collect food efficiently. The Pacman agent uses general search algorithms (informed and uninformed) to efficiently determine a path to his goal. The search algorithms implemented in this project are: depth-first search, breadth-first search, uniform-cost search, and A* search. I found this project on Berkeley University's AI material while working through my own AI course at university.",
             "github": "https://github.com/aryavatan/PacmanSearch",
             "skills": [
@@ -210,6 +211,36 @@
                 {
                     "caption": "Breadth-First Search",
                     "src": "assets/Projects/PacmanSearch/4.PNG"
+                }
+            ]
+        },
+        {
+            "name": "Maze Runner - Not a Ripoff",
+            "id": "MazeRunner",
+            "summary": "A simple third-person maze running game.",
+            "description": "My very first fully finished game made in the Unity game engine. You are an unknown maze runner trying to get to the end of the maze in as little time as possible. Your top 10 best times are saved in the leaderboards. Visit the itch.io page for this game to download and play it for yourself and try to get the best time! You can post your best time as well as any feedback you have on the itch.io page.",
+            "itchio": "https://aryavatan.itch.io/maze-runner-not-a-ripoff",
+            "skills": [
+                "Unity",
+                "C#"
+            ],
+            "icon":"assets/Projects/MazeRunner/MainMenu.PNG",
+            "pictures": [
+                {
+                    "caption": "Main Menu",
+                    "src": "assets/Projects/MazeRunner/MainMenu.PNG"
+                },
+                {
+                    "caption": "Locked Doors Throughout The Maze",
+                    "src": "assets/Projects/MazeRunner/ScreenshotDoor.PNG"
+                },
+                {
+                    "caption": "Keys Hidden Throughout The Maze",
+                    "src": "assets/Projects/MazeRunner/ScreenshotKey.PNG"
+                },
+                {
+                    "caption": "Advanced Particle Effects",
+                    "src": "assets/Projects/MazeRunner/Screenshot.PNG"
                 }
             ]
         }
