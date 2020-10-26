@@ -8,6 +8,10 @@ import { HttpService } from '../http.service';
 })
 export class ContactComponent implements OnInit {
 
+	email: any;
+	name : any;
+	message : any;
+	
 	statusDisplay : any;  // Bool for activating status message
 	statusAnimation : any;  // String for activating animation of status message
 	statusClass : any;  // String for selecting the class of status message (success or error)
