@@ -1,5 +1,5 @@
-$primary:rgb(152, 230, 152);
-$secondary: rgb(29, 31, 32);
+$primary:#98e698;
+$secondary: #1d1f20;
 
 img.logo{
    width: 100px;
@@ -93,37 +93,118 @@ ul {
     }
 }
 
-#email li {
-    width: 335px;
+section{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    div.form{
+        box-sizing: border-box;
+        height: auto;
+        width: 90%;
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: #F2F3EF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        border-radius: 20px;
+    
+        div.form-group{
+            width: 100%;
+            margin-top: 20px;
+            font-size: 20px;
+    
+            input,
+            textarea{
+                width: 100%;
+                padding: 5px;
+                font-size: 16px;  
+                border: 1px solid $secondary;
+                margin-top: 5px;
+                border-radius: 8px;
+
+                &:focus{
+                    outline: none !important;
+                    border: 1px solid black;
+                    box-shadow: 0 0 1px black;
+                    // outline-color: #719ECE;
+                }
+            }
+    
+            textarea {
+                font-family: "Roboto", sans-serif;
+                resize: vertical;
+            }
+    
+        }
+        
+        button[type=submit] {
+            background-color: $secondary;
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-size: 24px;
+            border-radius: 20px;
+            color: $primary;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: .2s ease;
+    
+            &:hover {
+                background-color: darken($color: $primary, $amount: 10%);
+                color: $secondary;
+            }
+        }
+    }
+    
+    div[id=status] {
+        width: 90%;
+        max-width: 500px;
+        text-align: center;
+        padding: 10px;
+        margin: 0 auto 20px;
+        border-radius: 20px;
+
+        &.success {
+            background-color: $primary;
+            font-weight: bold;
+            color: black;
+            animation: status 4s ease forwards;
+        }
+        &.error {
+            background-color: #ff5147;
+            color: white;
+            animation: status 4s ease forwards;
+        }
+    }
+
+    @keyframes status {
+        0%{
+            opacity: 1;
+            pointer-events: all;
+        }
+        90%{
+            opacity: 1;
+            pointer-events: all;
+        }
+        100%{
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
 }
+
 
 // RESPONSIVE CODE ============================================
 
 @media screen and (max-width: 1300px) {
     #mobilePageExtender {
         display: inline;
-    }
-}
-
-@media screen and (max-width: 490px){
-    #email li {
-        width: auto;
-        height: auto;
-        
-        div.col{
-            display: contents;
-
-            padding: 0px;
-            margin-left: auto;
-            margin-right: auto;
-
-            img, p, h3 {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                text-align: center;
-            }
-        }
     }
 }
 

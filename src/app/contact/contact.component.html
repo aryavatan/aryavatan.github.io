@@ -1,34 +1,4 @@
-<!-- <p>Contact Page in Development...</p> -->
-
 <div class="text">
-    <h3>Want to get in touch?</h3>
-    <p id="main-text">
-        Send me an email and I will reply as soon as possible, thanks!
-    </p> 
-</div>
-
-
-<div class="table" id="email">
-    <ul>
-        <li>
-            <a href=mailto:arya.vatanabadi@gmail.com target="_blank">
-                <div class="content">
-                    <div class="col">
-                        <img class="logo" src="assets/Contacts/Gmail.png">
-                    </div>
-                    <div class="col">
-                        <h3>Email</h3>
-                        <p>arya.vatanabadi@gmail.com</p>
-                    </div>
-                </div>
-            </a>
-        </li>
-    </ul>
-</div>
-
-
-<div class="text">
-    <br><br>
     <h3>Check out my other accounts!</h3>
     <p id="main-text">
         Visit my GitHub and my itch.io to see and/or download my other projects.
@@ -98,6 +68,44 @@
         </li>
     </ul>
 </div>
+
+
+<div class="text">
+    <br>
+    <h3>Want to get in touch?</h3>
+    <p id="main-text">
+        Send me an email using the form below and I will reply as soon as possible, thanks!
+    </p> 
+</div>
+
+<section>
+    <!-- *ngIf="statusDisplay" -->
+    <div id="status" [class]="statusClass" *ngIf="statusDisplay" [style.animation]="statusAnimation">
+        {{statusText}}
+    </div>
+    <div class="form">
+        <!-- action="https://formspree.io/f/xjvpwdwp"  method="POST" -->
+        <form (submit)="formSubmit(contactForm)" #contactForm="ngForm">
+          <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" [(ngModel)]="name">
+          </div>
+    
+          <div class="form-group">
+              <label for="email">Your Email:</label>
+              <input type="text" id="email" name="email" [(ngModel)]="email">
+          </div>
+    
+          <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea name="message" id="message" cols="35" rows="5" [(ngModel)]="message"></textarea>
+          </div>
+    
+          <button type="submit">Send</button>
+        </form>
+    </div>
+</section>
+
 
 <div id="mobilePageExtender">
     <br><br><br><br>
