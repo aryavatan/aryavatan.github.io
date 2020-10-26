@@ -36,6 +36,11 @@ export class ContactComponent implements OnInit {
 			await this.http.postContactMessage(name, email, message).then(() => {
 				this.statusClass = 'success';
 				this.statusText = 'Sent!';
+				
+				// Clear form
+				this.name = '';
+				this.email = '';
+				this.message = '';
 			}).catch(error => {
 				if(error){
 					console.log(error);
