@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ProjectService } from '../project.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -7,7 +7,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 	templateUrl: './project-details.component.html',
 	styleUrls: ['./project-details.component.scss']
 })
-export class ProjectDetailsComponent implements OnInit, OnDestroy {
+export class ProjectDetailsComponent implements OnInit {
 
 	project: any;
 	slideIndex: any;
@@ -16,10 +16,6 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
 	skills: Object;
 
 	constructor(private router: Router, private route: ActivatedRoute, private projectService: ProjectService) { }
-	
-	ngOnDestroy(): void {
-		localStorage.removeItem('project');
-	}
 
 	ngOnInit() {		
         // Get correct project from projectService
@@ -35,7 +31,7 @@ export class ProjectDetailsComponent implements OnInit, OnDestroy {
         this.skills = this.getProjectSkills();
         this.slideIndex = 0;
         this.showModal = "none";
-        this.showSlides(this.slideIndex);
+		this.showSlides(this.slideIndex);
     }
     
     // Gets all the skills of the project to display
