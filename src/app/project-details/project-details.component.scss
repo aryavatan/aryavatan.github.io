@@ -50,6 +50,7 @@ p {
 /* Hide the images by default */
 .mySlides {
     display: none;
+    border: 2px solid $primary;
 }
 
 /* Add a pointer when hovering over the thumbnail images */
@@ -134,6 +135,12 @@ p {
     float: left;
     width: 20%;
     margin-left: 1em;
+    border: 1px solid $primary;
+    transition: 0.1s ease;
+
+    &:hover{ 
+        border:  1px solid darken($primary, 25%);
+    }
 }
 
 /* Add a transparency effect for thumnbail images */
