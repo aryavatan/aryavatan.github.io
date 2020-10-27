@@ -84,12 +84,12 @@
         <div *ngIf="project.github || project.devpost">
             <h3>Want To Learn More?</h3>
             <p *ngIf="project.devpost" class="text">Visit devpost for more information about this project!</p>
-            <div class="devpostContainer">
+            <div *ngIf="project.devpost" class="devpostContainer">
                 <a id="devpost" href="{{project.devpost}}" target="_blank">DEVPOST</a>
             </div>
 
             <p *ngIf="project.github" class="text">Visit the open source GitHub repository to see the source code for this project!</p>
-            <div class="githubContainer">
+            <div *ngIf="project.github" class="githubContainer">
                 <a id="github" href="{{project.github}}" target="_blank">GitHub</a>
             </div>
         </div>

@@ -276,6 +276,29 @@
                     "src": "assets/Projects/EnerTrack/Your Usage Dashboard.PNG"
                 }
             ]
+        },
+        {
+            "name": "Motives",
+            "id": "Motives",
+            "summary": "Organizing and meeting up with your friends made clear and easy",
+            "description": "We have only one goal; to make organizing and meeting up with your friends as clear and easy as possible. This project was developed with my close friend and collegue Sarin Shrestha as a hackathon (Hack Western 6) project.",
+            "skills": [
+                "React",
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "icon":"assets/Projects/Motives/Landing Page.PNG",
+            "pictures": [
+                {
+                    "caption": "Landing Page",
+                    "src": "assets/Projects/Motives/Landing Page.PNG"
+                },
+                {
+                    "caption": "Motives happening in your area",
+                    "src": "assets/Projects/Motives/Nearby motives.PNG"
+                }
+            ]
         }
     ]
 }
