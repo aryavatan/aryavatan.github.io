@@ -78,7 +78,7 @@
         {
             "name": "Angular Sound",
             "id": "AngularSound",
-            "summary": "A music review site where users can write reviews for songs.",
+            "summary": "A music review site where users can write reviews for songs",
             "description": "A full stack web application made with the Angular framework for the front-end, Node.js for the back-end server, and MongoDB for the database solution. This project is a music review (demo) site in which authenticated users write reviews for songs. Once a user has registered with the site, they are able to write reviews for any song.",
             "github": "https://github.com/aryavatan/Angular-Sound",
             "skills": [
@@ -115,7 +115,7 @@
         {
             "name": "OS Chatroom",
             "id": "OSChatroom",
-            "summary": "A chatroom web application using client/server architecture.",
+            "summary": "A chatroom web application using client/server architecture",
             "description": "This app was developed as the final project for my Operating Systems course with three other friends. It is a chatroom web application using client/server architecture. Each front-end client enters their display name and can chat with other users in the same \"chatroom\". Clients can also make a private room, the name of the chatroom acts as the password, and chat with their friends. Node.js and Socket.io were used to route the messages between clients and different chatrooms",
             "github": "https://github.com/aryavatan/OS-Chatroom",
             "skills": [
@@ -135,7 +135,7 @@
         {
             "name": "Simple Sketchpad",
             "id": "sketchpad",
-            "summary": "A simple sketchpad, similar to microsoft paint.",
+            "summary": "A simple sketchpad, similar to microsoft paint",
             "description": "A simple sketchpad, similar to microsoft paint, written in Java using the Java AWT library. In addition to freehand drawing, basic shapes can be drawn as well, such as rectangles, lines, and ellipes. The color of each object can be changed as well, from black, red, green, blue, and yellow. Lastly, there is a save and load feature to allow you to save your sketch and load it later on to keep working on it.",
             "github": "https://github.com/aryavatan/SimpleSketchpad",
             "skills": [
@@ -160,7 +160,7 @@
         {
             "name": "aryavatan.ca",
             "id": "aryavatan",
-            "summary": "My personal portfolio website, made with Angular.",
+            "summary": "My personal portfolio website, made with Angular",
             "description": "Wanting to increase my understanding of web development and Angular in specific, I created this personal portfolio website for myself. This site serves as a way for me to display my projects and skills in a creative and personal way.",
             "github": "https://github.com/aryavatan/Portfolio",
             "skills": [
@@ -168,6 +168,9 @@
                 "HTML",
                 "CSS",
                 "TypeScript"
+            ],
+            "secondarySkills" : [
+                "Formspree"
             ],
             "icon":"assets/Projects/aryavatan.ca/Home.PNG",
             "pictures": [
@@ -188,7 +191,7 @@
         {
             "name": "Pacman Search",
             "id": "PacmanSearch",
-            "summary": "Pacman uses search algorithms to efficiently determine a path to his goal.",
+            "summary": "Pacman uses search algorithms to efficiently determine a path to his goal",
             "description": "In this project, the Pacman agent can find paths through his maze world, both to reach a particular location and to collect food efficiently. The Pacman agent uses general search algorithms (informed and uninformed) to efficiently determine a path to his goal. The search algorithms implemented in this project are: depth-first search, breadth-first search, uniform-cost search, and A* search. I found this project on Berkeley University's AI material while working through my own AI course at university.",
             "github": "https://github.com/aryavatan/PacmanSearch",
             "skills": [
@@ -241,6 +244,70 @@
                 {
                     "caption": "Advanced Particle Effects",
                     "src": "assets/Projects/MazeRunner/Screenshot.PNG"
+                }
+            ]
+        },
+        {
+            "name": "EnerTrack",
+            "id": "EnerTrack",
+            "summary": "A carbon tracking application for small businesses",
+            "description": "Our inspiration for EnerTrack came from a social issue that our group believed to be incredibly prevalent in today's society - global warming and climate change. We wanted to create a web-app that not only benefits the well-being of our environment through the promotion of low greenhouse gas emissions, but also benefits corporations by reducing their carbon tax rates. We believe that companies are currently facing significant political scrutiny in the face of rising fossil fuel consumption, and as a result, the government is increasing carbon tax rates on their annual metrics in hopes of reducing them. With 2019 being the hottest year in recorded history, we wanted to help alleviate the social tension surrounding this critical issue. After exploring the scientific, political and social implications of this topic, and researching the market, we created EnerTrack. EnerTrack is a web-app designed to simplify, track and project the carbon consumption of corporations with large carbon footprints. In 4 simple steps, our web-app will analyze your company’s objectives, track your consumption and footprint, calculate your estimated carbon tax and social costs, and match you with more eco-friendly and cost-effective alternatives using our database.Our stack for this project comprised of ReactJS, ExpressJS and MongoDB. We built the front-end with React, utilizing multiple libraries like Bootstrap. React sent requests to our back-end, which was created with ExpressJS. Express handled all our requests to and from our front-end and also communicating with our database. Our database was created with MongoDB. MongoDb provided a simple way to install and implement a database.",
+            "github": "https://github.com/ssarin1999/EnactusHacks2020",
+            "devpost": "https://devpost.com/software/enactus",
+            "skills": [
+                "React",
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "secondarySkills" : [
+                "Node.js",
+                "MongoDB"
+            ],
+            "icon":"assets/Projects/EnerTrack/Landing Page.PNG",
+            "pictures": [
+                {
+                    "caption": "Landing Page",
+                    "src": "assets/Projects/EnerTrack/Landing Page.PNG"
+                },
+                {
+                    "caption": "Entering your monthly carbon usage",
+                    "src": "assets/Projects/EnerTrack/Entering Monthly Usage.PNG"
+                },
+                {
+                    "caption": "Recommendations given based on your information",
+                    "src": "assets/Projects/EnerTrack/Recommendations Based on Preferences.PNG"
+                },
+                {
+                    "caption": "Your Usage Dashboard",
+                    "src": "assets/Projects/EnerTrack/Your Usage Dashboard.PNG"
+                }
+            ]
+        },
+        {
+            "name": "Motives",
+            "id": "Motives",
+            "summary": "Organizing and meeting up with your friends made clear and easy",
+            "description": "We have only one goal; to make organizing and meeting up with your friends as clear and easy as possible. This project was developed with my close friend and collegue Sarin Shrestha as a hackathon (Hack Western 6) project.",
+            "skills": [
+                "React",
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "secondarySkills" : [
+                "Node.js",
+                "MongoDB"
+            ],
+            "icon":"assets/Projects/Motives/Landing Page.PNG",
+            "pictures": [
+                {
+                    "caption": "Landing Page",
+                    "src": "assets/Projects/Motives/Landing Page.PNG"
+                },
+                {
+                    "caption": "Motives happening in your area",
+                    "src": "assets/Projects/Motives/Nearby motives.PNG"
                 }
             ]
         }
