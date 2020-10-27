@@ -74,6 +74,15 @@ ul {
             display: none;
         }
 
+        &#youtube {
+            p {
+                font-size: 17px;
+            }
+            img {
+                margin-top: 17px;
+            }
+        }
+
     }
 
     li:hover{
@@ -87,7 +96,7 @@ ul {
             display: none;
         }
         div.dark{
-            display: block;
+            display: inherit;
             float: left;
         }
     }
@@ -229,6 +238,15 @@ section{
                 margin-left: auto;
                 margin-right: auto;
                 text-align: center;
+            }
+        }
+        
+        &#youtube {
+            p {
+                font-size: 18px;
+            }
+            img {
+                margin-top: 0px;
             }
         }
     }
