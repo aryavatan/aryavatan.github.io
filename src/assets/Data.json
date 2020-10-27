@@ -260,19 +260,19 @@
             "icon":"assets/Projects/EnerTrack/Landing Page.PNG",
             "pictures": [
                 {
-                    "caption": "Main Menu",
+                    "caption": "Landing Page",
                     "src": "assets/Projects/EnerTrack/Landing Page.PNG"
                 },
                 {
-                    "caption": "Locked Doors Throughout The Maze",
+                    "caption": "Entering your monthly carbon usage",
                     "src": "assets/Projects/EnerTrack/Entering Monthly Usage.PNG"
                 },
                 {
-                    "caption": "Keys Hidden Throughout The Maze",
+                    "caption": "Recommendations given based on your information",
                     "src": "assets/Projects/EnerTrack/Recommendations Based on Preferences.PNG"
                 },
                 {
-                    "caption": "Advanced Particle Effects",
+                    "caption": "Your Usage Dashboard",
                     "src": "assets/Projects/EnerTrack/Your Usage Dashboard.PNG"
                 }
             ]
