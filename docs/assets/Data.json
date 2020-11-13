@@ -17,6 +17,17 @@
     ],
     "experiences":[
         {
+            "title": "Contract Developer (Capstone Project)",
+            "employer": "RBC Royal Bank",
+            "employerSite": "https://www.rbcroyalbank.com/personal.html",
+            "dates": "September, 2020 - Present",
+            "summary": "For my capstone project, myself and three of my colleagues were contracted by RBC to develop a community simulator. We will be using advanced techniques to build models that will predict customer and community characteristics for Canadian communities in a 5-10 year time horizon. We will also be developing a web application to engage with the models spatially and manipulate key parameters to simulate scenarios that may differ from projections.",
+            "keyPoints": [
+                "Using advanced machine and deep learning tools and libraries such as SciKit, TensorFlow, Pandas, Spark, and Hadoop",
+                "Due to signing a non-disclosure agreement with RBC, I will be largely unable to answer questions about the specifics of this project"
+            ]
+        },
+        {
             "title": "Coop Developer",
             "employer": "Indigo Books and Music",
             "employerSite": "https://www.chapters.indigo.ca/en-ca/",
@@ -251,7 +262,7 @@
             "name": "EnerTrack",
             "id": "EnerTrack",
             "summary": "A carbon tracking application for small businesses",
-            "description": "Our inspiration for EnerTrack came from a social issue that our group believed to be incredibly prevalent in today's society - global warming and climate change. We wanted to create a web-app that not only benefits the well-being of our environment through the promotion of low greenhouse gas emissions, but also benefits corporations by reducing their carbon tax rates. We believe that companies are currently facing significant political scrutiny in the face of rising fossil fuel consumption, and as a result, the government is increasing carbon tax rates on their annual metrics in hopes of reducing them. With 2019 being the hottest year in recorded history, we wanted to help alleviate the social tension surrounding this critical issue. After exploring the scientific, political and social implications of this topic, and researching the market, we created EnerTrack. EnerTrack is a web-app designed to simplify, track and project the carbon consumption of corporations with large carbon footprints. In 4 simple steps, our web-app will analyze your company’s objectives, track your consumption and footprint, calculate your estimated carbon tax and social costs, and match you with more eco-friendly and cost-effective alternatives using our database.Our stack for this project comprised of ReactJS, ExpressJS and MongoDB. We built the front-end with React, utilizing multiple libraries like Bootstrap. React sent requests to our back-end, which was created with ExpressJS. Express handled all our requests to and from our front-end and also communicating with our database. Our database was created with MongoDB. MongoDb provided a simple way to install and implement a database.",
+            "description": "Our inspiration for EnerTrack came from a social issue that our group believed to be incredibly prevalent in today's society - global warming and climate change. We wanted to create a web-app that not only benefits the well-being of our environment through the promotion of low greenhouse gas emissions, but also benefits corporations by reducing their carbon tax rates. We believe that companies are currently facing significant political scrutiny in the face of rising fossil fuel consumption, and as a result, the government is increasing carbon tax rates on their annual metrics in hopes of reducing them. With 2019 being the hottest year in recorded history, we wanted to help alleviate the social tension surrounding this critical issue. After exploring the scientific, political and social implications of this topic, and researching the market, we created EnerTrack. EnerTrack is a web-app designed to simplify, track and project the carbon consumption of corporations with large carbon footprints. In 4 simple steps, our web-app will analyze your company’s objectives, track your consumption and footprint, calculate your estimated carbon tax and social costs, and match you with more eco-friendly and cost-effective alternatives using our database. Our stack for this project comprised of ReactJS, ExpressJS and MongoDB. We built the front-end with React, utilizing multiple libraries like Bootstrap. React sent requests to our back-end, which was created with ExpressJS. Express handled all our requests to and from our front-end and also communicating with our database. Our database was created with MongoDB. MongoDb provided a simple way to install and implement a database.",
             "github": "https://github.com/ssarin1999/EnactusHacks2020",
             "devpost": "https://devpost.com/software/enactus",
             "skills": [
