@@ -17,6 +17,17 @@
     ],
     "experiences":[
         {
+            "title": "Contract Developer (Capstone Project)",
+            "employer": "RBC Royal Bank",
+            "employerSite": "https://www.rbcroyalbank.com/personal.html",
+            "dates": "September, 2020 - Present",
+            "summary": "For my capstone project, myself and three of my colleagues were contracted by RBC to develop a community simulator. We will be using advanced techniques to build models that will predict customer and community characteristics for Canadian communities in a 5-10 year time horizon. We will also be developing a web application to engage with the models spatially and manipulate key parameters to simulate scenarios that may differ from projections.",
+            "keyPoints": [
+                "Using advanced machine and deep learning tools and libraries such as SciKit, TensorFlow, Pandas, Spark, and Hadoop",
+                "Due to signing a non-disclosure agreement with RBC, I will be largely unable to answer questions about the specifics of this project"
+            ]
+        },
+        {
             "title": "Coop Developer",
             "employer": "Indigo Books and Music",
             "employerSite": "https://www.chapters.indigo.ca/en-ca/",
