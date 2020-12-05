@@ -129,6 +129,20 @@ body {
     }
 }
 
+div.games-container {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding-inline-start: 20px;
+        li {
+            padding-bottom: 20px;
+        }
+
+        .square {
+            display: none;
+        }
+    }    
+}
 
 /* Responsive layout - makes a three column-layout instead of four columns */
 @media screen and (max-width: 1350px) {
@@ -148,6 +162,14 @@ body {
 @media screen and (max-width: 650px) {
     .main {
         margin: auto;
+    }
+    div.games-container {
+        .banner{
+            display: none;
+        }
+        ul li .square {
+            display: inline;
+        }
     }
     .column {
         width: 100%;
