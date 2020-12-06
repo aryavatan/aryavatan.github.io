@@ -1,3 +1,27 @@
+<h2>Projects</h2>
+<div class="filters-list">
+    <ul *ngIf="filters">
+        <li (click)="filterSelected({name:'Show All'})" [class]="selectedFilter">
+            Show All
+        </li>
+        <li *ngFor="let filter of filters" (click)="filterSelected(filter)" [class]="filter.class">
+            {{filter.name}}
+        </li>
+    </ul>
+</div>
+
+<div class="main">
+    <div *ngIf="projects" class="row">
+        <div *ngFor="let project of projects" id="{{project.id}}" class="column">
+            <div class="content" (click)="projectClicked(project)">
+                <img src="{{project.icon}}" alt="{{project.name}}" style="width:100%">
+                <h3>{{project.name}}</h3>
+                <p>{{project.summary}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 <h2>Games</h2>
 <div class="games-container">
     <ul>
@@ -29,29 +53,4 @@
             </div>
         </li>
     </ul>
-</div>
-
-
-<h2>Projects</h2>
-<div class="filters-list">
-    <ul *ngIf="filters">
-        <li (click)="filterSelected({name:'Show All'})" [class]="selectedFilter">
-            Show All
-        </li>
-        <li *ngFor="let filter of filters" (click)="filterSelected(filter)" [class]="filter.class">
-            {{filter.name}}
-        </li>
-    </ul>
-</div>
-
-<div class="main">
-    <div *ngIf="projects" class="row">
-        <div *ngFor="let project of projects" id="{{project.id}}" class="column">
-            <div class="content" (click)="projectClicked(project)">
-                <img src="{{project.icon}}" alt="{{project.name}}" style="width:100%">
-                <h3>{{project.name}}</h3>
-                <p>{{project.summary}}</p>
-            </div>
-        </div>
-    </div>
 </div>
