@@ -229,36 +229,6 @@
             ]
         },
         {
-            "name": "Maze Runner - Not a Ripoff",
-            "id": "MazeRunner",
-            "summary": "A simple third-person maze running game.",
-            "description": "My very first fully finished game made in the Unity game engine. You are an unknown maze runner trying to get to the end of the maze in as little time as possible. Your top 10 best times are saved in the leaderboards. Visit the itch.io page for this game to download and play it for yourself and try to get the best time! You can post your best time as well as any feedback you have on the itch.io page.",
-            "itchio": "https://aryavatan.itch.io/maze-runner-not-a-ripoff",
-            "skills": [
-                "Unity",
-                "C#"
-            ],
-            "icon":"assets/Projects/MazeRunner/MainMenu.PNG",
-            "pictures": [
-                {
-                    "caption": "Main Menu",
-                    "src": "assets/Projects/MazeRunner/MainMenu.PNG"
-                },
-                {
-                    "caption": "Locked Doors Throughout The Maze",
-                    "src": "assets/Projects/MazeRunner/ScreenshotDoor.PNG"
-                },
-                {
-                    "caption": "Keys Hidden Throughout The Maze",
-                    "src": "assets/Projects/MazeRunner/ScreenshotKey.PNG"
-                },
-                {
-                    "caption": "Advanced Particle Effects",
-                    "src": "assets/Projects/MazeRunner/Screenshot.PNG"
-                }
-            ]
-        },
-        {
             "name": "EnerTrack",
             "id": "EnerTrack",
             "summary": "A carbon tracking application for small businesses",
@@ -292,33 +262,6 @@
                 {
                     "caption": "Your Usage Dashboard",
                     "src": "assets/Projects/EnerTrack/Your Usage Dashboard.PNG"
-                }
-            ]
-        },
-        {
-            "name": "Motives",
-            "id": "Motives",
-            "summary": "Organizing and meeting up with your friends made clear and easy",
-            "description": "We have only one goal; to make organizing and meeting up with your friends as clear and easy as possible. This project was developed with my close friend and collegue Sarin Shrestha as a hackathon (Hack Western 6) project.",
-            "skills": [
-                "React",
-                "HTML",
-                "CSS",
-                "JavaScript"
-            ],
-            "secondarySkills" : [
-                "Node.js",
-                "MongoDB"
-            ],
-            "icon":"assets/Projects/Motives/Landing Page.PNG",
-            "pictures": [
-                {
-                    "caption": "Landing Page",
-                    "src": "assets/Projects/Motives/Landing Page.PNG"
-                },
-                {
-                    "caption": "Motives happening in your area",
-                    "src": "assets/Projects/Motives/Nearby motives.PNG"
                 }
             ]
         }
