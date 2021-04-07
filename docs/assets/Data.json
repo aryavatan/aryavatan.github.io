@@ -17,13 +17,25 @@
     ],
     "experiences":[
         {
+            "title": "Junior Developer",
+            "employer": "Indigo Books and Music",
+            "employerSite": "https://www.chapters.indigo.ca/en-ca/",
+            "dates": "May, 2021 - Present",
+            "summary": "I'm very excited to announce that I'll be starting my post-graduation career at Indigo Books and Music as a junior developer. Huge thank you to all my collegues at Indigo who helped make this possible and I'm very excited to be working with you all again at this amazing organization.",
+            "keyPoints": [
+                "Started from the bottom: System.out.print(\"Hello World!\");",
+                "Now we here: console.log(\"Hello Indigo!\")"
+            ]
+        },
+        {
             "title": "Contract Developer (Capstone Project)",
             "employer": "RBC Royal Bank",
             "employerSite": "https://www.rbcroyalbank.com/personal.html",
-            "dates": "September, 2020 - Present",
-            "summary": "For my capstone project, myself and three of my colleagues were contracted by RBC to develop a community simulator. We will be using advanced techniques to build models that will predict customer and community characteristics for Canadian communities in a 5-10 year time horizon. We will also be developing a web application to engage with the models spatially and manipulate key parameters to simulate scenarios that may differ from projections.",
+            "dates": "September 2020 - April 2021",
+            "summary": "For my capstone project, myself and three of my colleagues were contracted by RBC to develop a community simulator. We used advanced machine learning techniques to build models that predictrd customer and community characteristics for Canadian communities in a 5-10 year time horizon. We also developed a web application to engage with the models spatially and manipulate key parameters to simulate scenarios that may differ from projections.",
             "keyPoints": [
                 "Using advanced machine and deep learning tools and libraries such as SciKit, TensorFlow, Pandas, Spark, and Hadoop",
+                "React and Leaflet used to develop a client-facing web application with an interactable map to display how communities will evolve in the future",
                 "Due to signing a non-disclosure agreement with RBC, I will be largely unable to answer questions about the specifics of this project"
             ]
         },
@@ -65,7 +77,7 @@
         {
             "title": "Founder",
             "employer": "AVA Computer Upgrades",
-            "dates": "August 2016 - April 2018",
+            "dates": "August, 2016 - April, 2018",
             "summary": "Launching my first business taught me that success comes to those who are willing to work hard. I turned my passion of building and working on computers into a profitable business and learned a lot in the process.",
             "keyPoints": [
                 "Repaired over 50 computer systems over ~2 years of operation",
