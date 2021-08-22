@@ -1,0 +1,33 @@
+<div class="clearfix">
+    <div class="box" id="image">
+        <img src="assets/Beach.JPG" alt="Arya">
+    </div>
+
+    <div class="box" id="text">
+        <h1>Hey there!</h1>
+        <h1>I'm Arya Vatan-Abadi</h1>
+        <h1>Passionate <span class="title">Software Engineer</span></h1>
+        <br>
+        <p>I'm here to write code and chew bubble gum, And I'm all out of bubble gum...</p>
+
+        <div id="skills">
+            <ul *ngIf="skills">
+                <li *ngFor="let skill of skills" [class]="skill.class" (click)="skillClicked(skill)">{{ skill.name }}</li>
+            </ul>
+        </div>
+
+        <div id="shortcuts">
+            <ul>
+                <li><a href="#" routerLink="/about">About Me</a></li>
+                <li><a href="#" routerLink="/experience">Experience</a></li>
+                <li><a href="#" routerLink="/projects">Projects</a></li>
+                <li><a href="#" routerLink="/contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div id="extraSpace">
+            <br><br>
+        </div>
+
+    </div>
+</div>

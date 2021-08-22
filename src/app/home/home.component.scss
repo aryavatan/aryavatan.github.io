@@ -1,277 +1,273 @@
-$primary: rgb(152, 230, 152);
-$secondary: rgb(29, 31, 32);
+@import "../app.component.scss";
 
 #image {
-    height: 70%;
+	height: 70%;
 }
 
 img {
-    object-fit: cover;
-    overflow: hidden;
-    object-position: 20% 0px;
-    width: auto;
-    height: auto;
-    max-width: 500px;
-    max-height: 90%;
-    border-radius: 8px;
-    margin-left: 20%;
+	object-fit: cover;
+	overflow: hidden;
+	object-position: 20% 0px;
+	width: auto;
+	height: auto;
+	max-width: 500px;
+	max-height: 90%;
+	border-radius: 8px;
+	margin-left: 20%;
 }
 
 div#text {
-    margin-top: 1em;
+	margin-top: 1em;
 
-    h1 {
-        font-family: "Roboto Condensed", sans-serif;
-        color: white;
-        font-size: 250%;
-        margin: 0;
-        margin-top: 15px;
-    }
+	h1 {
+		font-family: "Roboto Condensed", sans-serif;
+		color: white;
+		font-size: 250%;
+		margin: 0;
+		margin-top: 15px;
+	}
 
-    span.title {
-        color: $primary;
-    }
+	span.title {
+		color: $primary;
+	}
 
-    p {
-        font-family: "Roboto Condensed", sans-serif;
-        color: darken(white, 50%);
-    }
+	p {
+		font-family: "Roboto Condensed", sans-serif;
+		color: darken(white, 50%);
+	}
 }
 
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .box {
-    float: left;
-    width: 50%;
-    padding: 40px;
+	float: left;
+	width: 50%;
+	padding: 40px;
 }
 
 .clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+	content: "";
+	clear: both;
+	display: table;
 }
 
 #skills > ul {
-    list-style-type: none;
-    margin-top: 3em;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
+	list-style-type: none;
+	margin-top: 3em;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
 
-   
+	li {
+		background: $primary;
+		padding: 1em;
+		margin-right: 10px;
+		width: auto;
+		width: 120px;
+		text-align: center;
+		height: auto;
+		margin-bottom: 1em;
+		display: flex;
+		flex-direction: column;
+		color: black;
+		border-radius: 8px;
+		transition: 0.2s ease;
+	}
 
-    li {
-        background: $primary;
-        padding: 1em;
-        margin-right: 10px;
-        width: auto;
-        width: 120px;
-        text-align: center;
-        height: auto;
-        margin-bottom: 1em;
-        display: flex;
-        flex-direction: column;
-        color: black;
-        border-radius: 8px;
-        transition: 0.2s ease;
-    }
-
-    li:hover {
-        &.has-project {
-            background: darken($primary, 25%);
-            font-weight: bolder;
-            cursor: pointer;
-        }
-    }
+	li:hover {
+		&.has-project {
+			background: darken($primary, 25%);
+			font-weight: bolder;
+			cursor: pointer;
+		}
+	}
 }
 
 #shortcuts {
-    margin-top: 30px;
-    display: none;
-    width: auto;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+	margin-top: 30px;
+	display: none;
+	width: auto;
+	max-width: 300px;
+	margin-left: auto;
+	margin-right: auto;
 
-    ul {
-        list-style: none;
-        padding: 0;
+	ul {
+		list-style: none;
+		padding: 0;
 
-        li {
-            width: auto;
-            max-width: 300px;
-            height: 45px;
-            font-family: "Roboto", sans-serif;
-            font-size: 20px;
-            border: 2px solid $primary;
-            margin: 0 0 15px 0;
-            text-align: center;
-            color: $primary;
-            transition: 0.2s;
-            display: grid;
-            align-items: center;
-            
-            a {
-                color: inherit;
-                text-decoration: none;            
-            }
+		li {
+			width: auto;
+			max-width: 300px;
+			height: 45px;
+			font-family: "Roboto", sans-serif;
+			font-size: 20px;
+			border: 2px solid $primary;
+			margin: 0 0 15px 0;
+			text-align: center;
+			color: $primary;
+			transition: 0.2s;
+			display: grid;
+			align-items: center;
 
-            &:hover{
-                background-color: $primary;
-                color: black;
-                font-weight: bold;
-            }
-        }
-    }
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+
+			&:hover {
+				background-color: $primary;
+				color: black;
+				font-weight: bold;
+			}
+		}
+	}
 }
 
 #extraSpace {
-    display: none;
+	display: none;
 }
 
 // MAX WIDTH: 2000px =========================================================
 @media screen and (max-width: 2000px) {
-    img {
-        margin-left: 15%;
-    }
+	img {
+		margin-left: 15%;
+	}
 }
 
 // MAX WIDTH: 1600px =========================================================
 @media screen and (max-width: 1600px) {
-    img {
-        object-fit: cover;
-        overflow: hidden;
-        width: auto;
-        height: auto;
-        max-width: 90%;
-        max-height: 90%;
-        border-radius: 8px;
-        margin-left: 5%;
-    }
+	img {
+		object-fit: cover;
+		overflow: hidden;
+		width: auto;
+		height: auto;
+		max-width: 90%;
+		max-height: 90%;
+		border-radius: 8px;
+		margin-left: 5%;
+	}
 
-    .box {
-        padding: 40px;
-    }
+	.box {
+		padding: 40px;
+	}
 }
 
 // MAX WIDTH: 1500px =========================================================
 @media screen and (max-width: 1500px) {
-    img{
-        margin: auto;
-    }
-    .box {
-        padding: 0px;
-    }
+	img {
+		margin: auto;
+	}
+	.box {
+		padding: 0px;
+	}
 }
 
 // MAX WIDTH: 1300px =========================================================
 @media screen and (max-width: 1300px) {
-    #skills > ul {
-        margin-top: 1.4em;
-        li{
-            padding: 12px;
-        }
-    }
+	#skills > ul {
+		margin-top: 1.4em;
+		li {
+			padding: 12px;
+		}
+	}
 }
 
 // MAX WIDTH: 1150px =========================================================
 @media screen and (max-width: 1150px) {
-    #shortcuts{
-        display: block;
-    }
-    #skills{
-        display: none;
-    }
+	#shortcuts {
+		display: block;
+	}
+	#skills {
+		display: none;
+	}
 }
 
 // MAX WIDTH: 1130px =========================================================
-@media screen and (max-width: 1130px){
-    #skills > ul > li {
-        padding: 12px;
-    }
+@media screen and (max-width: 1130px) {
+	#skills > ul > li {
+		padding: 12px;
+	}
 }
 
 // MAX WIDTH: 1100px =========================================================
-@media screen and (max-width: 1100px){
-    .clearfix{
-        position: relative;
-    }
-    div#text {
-        h1 {
-            font-size: 225%;
-        }
-    }
-    #skills > ul > li {
-        padding: 8px;
-        font-size: 16px;
-    }
-    #shortcuts > ul > li {
-        font-size: 18px;
-        height: 40px;
-    }
+@media screen and (max-width: 1100px) {
+	.clearfix {
+		position: relative;
+	}
+	div#text {
+		h1 {
+			font-size: 225%;
+		}
+	}
+	#skills > ul > li {
+		padding: 8px;
+		font-size: 16px;
+	}
+	#shortcuts > ul > li {
+		font-size: 18px;
+		height: 40px;
+	}
 }
 
 // MAX WIDTH: 950px =========================================================
-@media screen and (max-width: 950px){
-    div#text {
-        h1 {
-            font-size: 150%;
-            margin-top: 0;
-            margin-bottom: 5px;
-        }
-        p {
-            font-size: 16px;
-            margin: 0;
-            margin-bottom: 0;
-        }
-    }
-    #skills > ul {
-        margin-top: 30px;
-    }
-    #shortcuts {
-        // margin-top: 0;
+@media screen and (max-width: 950px) {
+	div#text {
+		h1 {
+			font-size: 150%;
+			margin-top: 0;
+			margin-bottom: 5px;
+		}
+		p {
+			font-size: 16px;
+			margin: 0;
+			margin-bottom: 0;
+		}
+	}
+	#skills > ul {
+		margin-top: 30px;
+	}
+	#shortcuts {
+		// margin-top: 0;
 
-        ul > li {
-            height: 35px;
-        }
-    }
-    
+		ul > li {
+			height: 35px;
+		}
+	}
 }
 
 // MAX WIDTH: 725px =========================================================
-@media screen and (max-width: 725px){
-    .box{
-        width: 100%;
-    }
-    img{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        object-fit: cover;
-        max-width: 100%;
-        max-height: 500px;
-    }
-    div#text {
-        text-align: center;
-        p {
-            font-size: 17px;
-        }
-    }
-    #skills > ul {
-        align-items: center;
-        justify-content: center;
-        li {
-            padding: 16px;
-        }
-    }
-    #shortcuts > ul > li {
-        font-size: 20px;
-        height: 50px;
-    }
-    #extraSpace {
-        display: block;
-    }
+@media screen and (max-width: 725px) {
+	.box {
+		width: 100%;
+	}
+	img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		object-fit: cover;
+		max-width: 100%;
+		max-height: 500px;
+	}
+	div#text {
+		text-align: center;
+		p {
+			font-size: 17px;
+		}
+	}
+	#skills > ul {
+		align-items: center;
+		justify-content: center;
+		li {
+			padding: 16px;
+		}
+	}
+	#shortcuts > ul > li {
+		font-size: 20px;
+		height: 50px;
+	}
+	#extraSpace {
+		display: block;
+	}
 }
