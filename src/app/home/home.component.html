@@ -13,11 +13,11 @@
 
 		<div id="skills">
 			<ul *ngIf="skills">
-				<li *ngFor="let skill of skills" [class]="skill.class" (click)="skillClicked(skill)">{{ skill.name }}
-				</li>
+				<li *ngFor="let skill of skills">{{ skill }}</li>
 			</ul>
 		</div>
 
+		<!-- Responsive Shortcuts -->
 		<div id="shortcuts">
 			<ul>
 				<li><a href="#" routerLink="/about">About Me</a></li>
@@ -31,5 +31,46 @@
 			<br><br>
 		</div>
 
+	</div>
+</div>
+
+<div class="about-me">
+	<h1>About <span class="title">Me</span></h1>
+	<div class="text">
+		<p>
+			Hello there, I'm Arya! Welcome to my personal website, I'm so happy you found it!
+			<br><br>
+			I'm a professional <span>software engineer</span> and <span>web developer</span> from Toronto,
+			but I'm working hard every day to become a professional <span>game developer</span>.
+			I love playing video games and I love making them too.
+			<br><br>
+			Some of my favorite games (I have a lot favorites) are:
+		</p>
+		<ul>
+			<li>FIFA</li>
+			<li>Minecraft</li>
+			<li>Fallout / Skyrim</li>
+			<li>Assassins Creed series</li>
+			<li>Metal Gear Solid series</li>
+		</ul>
+	</div>
+
+</div>
+
+<div class="games">
+	<h1>Check out my <span class="title">Games</span></h1>
+
+	<div class="main">
+		<div *ngIf="games" class="row">
+			<div *ngFor="let game of games" id="{{game.id}}" class="column">
+				<div class="content" (click)="projectClicked(project)">
+					<a href={{game.link}} target="_blank">
+						<img src="{{game.icon}}" alt="{{game.name}}" style="width:100%">
+						<h3>{{game.name}}</h3>
+						<p>{{game.tagline}}</p>
+					</a>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>

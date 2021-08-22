@@ -1,20 +1,28 @@
 {
     "skills": [
-        "Java",
-        "C#",
-        "JavaScript",
-        "Python",
-        "C++",
-        "SQL",
-        "HTML",
-        "CSS",
-        "Node.js",
-        "React",
-        "Angular",
-        "Flutter",
-        "Dart",
-        "Unity"
-    ],
+		"React",
+		"Angular",
+		"React Native",
+		"Flutter",
+		"Unity",
+		"Photoshop"
+	],
+	"all-skills": [
+		"Java",
+		"C#",
+		"JavaScript",
+		"Python",
+		"C++",
+		"SQL",
+		"HTML",
+		"CSS",
+		"Node.js",
+		"React",
+		"Angular",
+		"Flutter",
+		"Dart",
+		"Unity"
+	],
     "experiences":[
         {
             "title": "Junior Developer",
@@ -277,5 +285,42 @@
                 }
             ]
         }
-    ]
+    ],
+	"games": [
+		{
+			"name": "Drift The Dishes",
+			"id": "Drift-The-Dishes",
+			"tagline": "Drift through the streets as you rush to deliver food",
+			"link": "https://aryavatan.itch.io/drift-the-dishes",
+			"icon":"assets/Games/DriftTheDishes.png"
+		},
+		{
+			"name": "Wrath of Anubis",
+			"id": "Wrath-of-Anubis",
+			"tagline": "Wave-Based Zombie Survival Shooter",
+			"link": "https://aryavatan.itch.io/wrath-of-anubis",
+			"icon":"assets/Games/WrathOfAnubis.png"
+		},
+		{
+			"name": "Storm Chaser",
+			"id": "Storm-Chaser",
+			"tagline": "Chase after the perfect storm...",
+			"link": "https://aryavatan.itch.io/storm-chaser",
+			"icon":"assets/Games/StormChaser.png"
+		},
+		{
+			"name": "flower shop",
+			"id": "flower-shop",
+			"tagline": "Spring is a blooming",
+			"link": "https://aryavatan.itch.io/flower-shop",
+			"icon":"assets/Games/FlowerShop.png"
+		},
+		{
+			"name": "Pong RELOADED",
+			"id": "Pong-RELOADED",
+			"tagline": "Classic Pong... but with extra POST PROCESSING",
+			"link": "https://aryavatan.itch.io/pong-reloaded",
+			"icon":"assets/Games/PongRELOADED.png"
+		}
+	]
 }

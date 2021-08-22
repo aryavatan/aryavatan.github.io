@@ -12,7 +12,7 @@ img {
 	height: auto;
 	max-width: 500px;
 	max-height: 90%;
-	border-radius: 8px;
+	border-radius: 20px;
 	margin-left: 20%;
 }
 
@@ -55,33 +55,26 @@ div#text {
 
 #skills > ul {
 	list-style-type: none;
-	margin-top: 3em;
+	margin-top: 25px;
 	padding: 0;
 	display: flex;
 	flex-wrap: wrap;
 
 	li {
 		background: $primary;
-		padding: 1em;
-		margin-right: 10px;
+
+		margin: 10px;
+		margin-left: 0;
+
+		padding: 12px;
+		padding-left: 18px;
+		padding-right: 18px;
+
 		width: auto;
-		width: 120px;
 		text-align: center;
 		height: auto;
-		margin-bottom: 1em;
-		display: flex;
-		flex-direction: column;
 		color: black;
-		border-radius: 8px;
-		transition: 0.2s ease;
-	}
-
-	li:hover {
-		&.has-project {
-			background: darken($primary, 25%);
-			font-weight: bolder;
-			cursor: pointer;
-		}
+		border-radius: 20px;
 	}
 }
 
@@ -120,6 +113,156 @@ div#text {
 				background-color: $primary;
 				color: black;
 				font-weight: bold;
+			}
+		}
+	}
+}
+
+// ABOUT ME
+.about-me {
+	margin-top: 50px;
+	h1 {
+		font-family: "Roboto Condensed", sans-serif;
+		color: white;
+		font-size: 250%;
+		margin: 0;
+		margin-top: 15px;
+		margin-bottom: 15px;
+
+		text-align: center;
+	}
+	span.title {
+		color: $primary;
+	}
+	.text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		p {
+			width: 75%;
+			color: white;
+			text-align: center;
+
+			span {
+				color: $primary;
+			}
+		}
+
+		ul {
+			margin-top: 0;
+			color: $primary;
+			list-style-type: none;
+			li {
+				color: white;
+			}
+			li::before {
+				content: "\25AA"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+				color: $primary; /* Change the color */
+				font-weight: bold; /* If you want it to be bold */
+				display: inline-block; /* Needed to add space between the bullet and the text */
+				width: 1em; /* Also needed for space (tweak if needed) */
+				margin-left: -1em; /* Also needed for space (tweak if needed) */
+			}
+		}
+	}
+}
+
+// GAMES
+.games {
+	margin-top: 55px;
+
+	h1 {
+		font-family: "Roboto Condensed", sans-serif;
+		color: white;
+		font-size: 250%;
+		margin: 0;
+		margin-top: 15px;
+		margin-bottom: 15px;
+
+		text-align: center;
+	}
+
+	span.title {
+		color: $primary;
+	}
+
+	.main {
+		.row {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: center;
+		}
+
+		/* Add padding BETWEEN each column (if you want) */
+		.row,
+		.row > .column {
+			padding: 10px;
+		}
+
+		/* Create four equal columns that floats next to each other */
+		.column {
+			float: left;
+			width: 23%;
+			display: inherit; // Sets project heights to be equal
+		}
+
+		/* Clear floats after rows */
+		.row:after {
+			content: "";
+			clear: both;
+		}
+
+		/* Content */
+		.content {
+			background-color: lighten($secondary, 10%);
+			padding: 10px;
+			font-family: "Roboto Condensed", sans-serif;
+			transition: 0.2s ease;
+			border-style: solid;
+			border-width: 2px;
+			border-color: $primary;
+			border-radius: 20px;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			a {
+				text-decoration: none;
+			}
+
+			h3 {
+				font-family: "Roboto Condensed", sans-serif;
+				color: $primary;
+				margin-bottom: 0;
+				font-size: 22px;
+			}
+
+			p {
+				color: white;
+				margin-bottom: 5px;
+				align-self: flex-start;
+			}
+
+			&:hover {
+				cursor: pointer;
+				background-color: $primary;
+				border-color: $secondary;
+				p,
+				h3 {
+					color: black;
+				}
+			}
+			img {
+				border-radius: 20px;
+				margin: 0;
+			}
+
+			&:active {
+				border-color: black;
+				background-color: darken($primary, 20%);
 			}
 		}
 	}

@@ -20,7 +20,7 @@ export class AboutComponent implements OnInit {
 
 	initSkills() {
 		let list = [];
-		data.skills.sort().forEach(skill => {
+		data["all-skills"].sort().forEach(skill => {
 			let hasProject = this.projectService.doesSkillHaveProjects(skill) ? "has-project" : "";
 			list.push({ name: skill, class: hasProject });
 		});
@@ -32,13 +32,13 @@ export class AboutComponent implements OnInit {
 	skillClicked(skill) {
 		if (skill.class == "has-project") {
 			this.router.navigate(
-                ['/projects'],
-                { 
-                    queryParams: { 
-                        filter: skill.name
-                    }, 
-                }
-            );
+				['/projects'],
+				{
+					queryParams: {
+						filter: skill.name
+					},
+				}
+			);
 		}
 	}
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import data from '../../assets/Data.json';
-import { ProjectService } from '../project.service';
 import { Router } from '@angular/router';
+import { GameServiceService } from '../game-service.service';
 
 @Component({
 	selector: 'app-home',
@@ -11,35 +11,39 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
 	skills: Object;
+	games: Object;
 
-	constructor(private router: Router, private projectService: ProjectService) { }
+	constructor(
+		private router: Router,
+		private gameService: GameServiceService
+	) { }
 
 	ngOnInit() {
 		this.initSkills();
+		this.initGames();
 	}
 
-	initSkills(){
-		let list = [];
-		data.skills.sort().forEach(skill => {
-			let hasProject = this.projectService.doesSkillHaveProjects(skill) ? "has-project" : "";
-			list.push({name:skill, class:hasProject});
-		});
-
-		this.skills = list;
+	initSkills() {
+		this.skills = data['skills'].sort();
 	}
 
 	// If skill that has projects is clicked, route to projects w/ that skill as the filter
-	skillClicked(skill){
-		if(skill.class == "has-project"){
+	skillClicked(skill) {
+		if (skill.class == "has-project") {
 			this.router.navigate(
-                ['/projects'],
-                { 
-                    queryParams: { 
-                        filter: skill.name
-                    }, 
-                }
-            );
+				['/projects'],
+				{
+					queryParams: {
+						filter: skill.name
+					},
+				}
+			);
 		}
+	}
+
+	// Get the games from data.json
+	initGames() {
+		this.games = this.gameService.getAllGames();
 	}
 
 }
