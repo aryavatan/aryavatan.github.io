@@ -140,29 +140,35 @@ div#text {
 		align-items: center;
 
 		p {
-			width: 75%;
+			width: 70%;
 			color: white;
-			text-align: center;
+			text-align: start;
 
 			span {
 				color: $primary;
 			}
 		}
 
-		ul {
-			margin-top: 0;
-			color: $primary;
-			list-style-type: none;
-			li {
-				color: white;
-			}
-			li::before {
-				content: "\25AA"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-				color: $primary; /* Change the color */
-				font-weight: bold; /* If you want it to be bold */
-				display: inline-block; /* Needed to add space between the bullet and the text */
-				width: 1em; /* Also needed for space (tweak if needed) */
-				margin-left: -1em; /* Also needed for space (tweak if needed) */
+		.fav-games {
+			width: 70%;
+
+			ul {
+				margin-top: 0;
+				color: $primary;
+				list-style-type: none;
+				align-self: flex-start;
+
+				li {
+					color: white;
+				}
+				li::before {
+					content: "\25AA"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+					color: $primary; /* Change the color */
+					font-weight: bold; /* If you want it to be bold */
+					display: inline-block; /* Needed to add space between the bullet and the text */
+					width: 1em; /* Also needed for space (tweak if needed) */
+					margin-left: -1em; /* Also needed for space (tweak if needed) */
+				}
 			}
 		}
 	}
@@ -188,11 +194,16 @@ div#text {
 	}
 
 	.main {
+		display: flex;
+		justify-content: center;
+
 		.row {
 			display: flex;
 			flex-wrap: wrap;
 			flex-direction: row;
 			justify-content: center;
+
+			width: 75%;
 		}
 
 		/* Add padding BETWEEN each column (if you want) */
@@ -204,7 +215,7 @@ div#text {
 		/* Create four equal columns that floats next to each other */
 		.column {
 			float: left;
-			width: 23%;
+			width: 33%;
 			display: inherit; // Sets project heights to be equal
 		}
 
@@ -225,11 +236,10 @@ div#text {
 			border-color: $primary;
 			border-radius: 20px;
 
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-
 			a {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
 				text-decoration: none;
 			}
 
