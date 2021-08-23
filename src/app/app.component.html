@@ -7,10 +7,9 @@
 			<a routerLink="/" class="logo">Arya Vatan-Abadi</a>
 			<nav>
 				<ul>
-					<li><a href="#" routerLink="/" id="home">Home</a></li>
-					<li><a href="#" routerLink="/about" id="about">About Me</a></li>
-					<li><a href="#" routerLink="/experience" id="experience">Experience</a></li>
-					<li><a href="#" routerLink="/projects" id="projects">Projects</a></li>
+					<li><a routerLink="/" (click)="topFunction()" id="home">Home</a></li>
+					<li><a routerLink="/" (click)="scrollToElement('about-me')" id="about">About Me</a></li>
+					<li><a routerLink="/" (click)="scrollToElement('games')" id="game">Games</a></li>
 					<li><a href="#" routerLink="/contact" id="contact">Contact</a></li>
 				</ul>
 			</nav>
@@ -36,6 +35,8 @@
 		<hr>
 	</div>
 </header>
+
+<button (click)="topFunction()" id="topBtn" title="Go to top">↑</button>
 
 <div id="main" class="container" (click)="closeNav()">
 	<router-outlet></router-outlet>

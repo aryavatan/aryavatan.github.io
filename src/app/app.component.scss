@@ -1,2 +1,27 @@
 $primary: rgb(152, 230, 152);
 $secondary: rgb(29, 31, 32);
+
+#topBtn {
+	display: block; /* Hidden by default */
+	position: fixed; /* Fixed/sticky position */
+	bottom: 20px; /* Place the button at the bottom of the page */
+	right: 30px; /* Place the button 30px from the right */
+	z-index: 99; /* Make sure it does not overlap */
+	border: none; /* Remove borders */
+	outline: none; /* Remove outline */
+	background-color: #555; /* Add a dark-grey background on hover */
+	color: white; /* Text color */
+	cursor: pointer; /* Add a mouse pointer on hover */
+	border-radius: 20px; /* Rounded corners */
+	font-size: 30px; /* Increase font size */
+
+	border: solid 2px $primary;
+
+	width: 50px;
+	height: 50px;
+
+	&:hover {
+		background-color: $primary;
+		color: black;
+	}
+}

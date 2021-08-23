@@ -7,13 +7,10 @@
 img {
 	object-fit: cover;
 	overflow: hidden;
-	object-position: 20% 0px;
-	width: auto;
-	height: auto;
-	max-width: 500px;
-	max-height: 90%;
+	object-position: 0 -80px;
+	width: 500px;
+	height: 600px;
 	border-radius: 20px;
-	margin-left: 20%;
 }
 
 div#text {
@@ -268,6 +265,11 @@ div#text {
 			img {
 				border-radius: 20px;
 				margin: 0;
+				object-position: 20% 0px;
+				width: auto;
+				height: auto;
+				max-width: 500px;
+				max-height: 90%;
 			}
 
 			&:active {
@@ -285,22 +287,22 @@ div#text {
 // MAX WIDTH: 2000px =========================================================
 @media screen and (max-width: 2000px) {
 	img {
-		margin-left: 15%;
+		margin-left: 10%;
 	}
 }
 
 // MAX WIDTH: 1600px =========================================================
 @media screen and (max-width: 1600px) {
-	img {
-		object-fit: cover;
-		overflow: hidden;
-		width: auto;
-		height: auto;
-		max-width: 90%;
-		max-height: 90%;
-		border-radius: 8px;
-		margin-left: 5%;
-	}
+	// img {
+	// 	object-fit: cover;
+	// 	overflow: hidden;
+	// 	width: auto;
+	// 	height: auto;
+	// 	max-width: 90%;
+	// 	max-height: 90%;
+	// 	border-radius: 8px;
+	// 	margin-left: 5%;
+	// }
 
 	.box {
 		padding: 40px;
