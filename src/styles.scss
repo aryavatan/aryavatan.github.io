@@ -15,7 +15,13 @@ body {
 
 header {
 	background: $secondary;
-	padding: 1em 0;
+
+	// Padding
+	padding-top: 18px;
+
+	position: fixed;
+	width: 100%;
+	top: 0;
 
 	a {
 		color: white;

@@ -44,6 +44,10 @@ div#text {
 	padding: 40px;
 }
 
+.clearfix {
+	padding-top: 90px;
+}
+
 .clearfix::after {
 	content: "";
 	clear: both;

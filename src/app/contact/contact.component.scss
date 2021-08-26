@@ -1,259 +1,263 @@
-$primary:#98e698;
+$primary: #98e698;
 $secondary: #1d1f20;
 
-img.logo{
-   width: 100px;
-   margin:0;
+.top-padding {
+	padding-top: 90px;
+}
+
+img.logo {
+	width: 100px;
+	margin: 0;
 }
 
 p {
-    color: white;
+	color: white;
 }
 
-.text{
-    text-align: center;
+.text {
+	text-align: center;
 }
 
 .content .col {
-    float: left;
-    padding: 5px;
-    margin-left: auto;
-    margin-right: auto;
+	float: left;
+	padding: 5px;
+	margin-left: auto;
+	margin-right: auto;
 
-    img {
-        padding-right: 10px;
-    }
+	img {
+		padding-right: 10px;
+	}
 }
 
 h3 {
-    color: $primary;
-    font-family: "Roboto Condensed", sans-serif;
-    font-size: 200%;
+	color: $primary;
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: 200%;
 }
 
 div.table {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 ul {
 	list-style-type: none;
-    margin: 0;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    font-family: "Roboto Condensed", sans-serif;
-    a {
-        text-decoration:none;
-    }
+	margin: 0;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	font-family: "Roboto Condensed", sans-serif;
+	a {
+		text-decoration: none;
+	}
 
-    li {
-        background-color: lighten($secondary, 10%);
-        padding: 15px;
-        margin: 10px;
-        width: 240px;
-        height: 110px;
-        display: flex;
-        border: solid;
-        border-width: 2px;
-        border-color: $primary;
-        border-radius: 10px;
-        overflow: hidden;
-        transition: 0.3s ease;
+	li {
+		background-color: lighten($secondary, 10%);
+		padding: 15px;
+		margin: 10px;
+		width: 240px;
+		height: 110px;
+		display: flex;
+		border: solid;
+		border-width: 2px;
+		border-color: $primary;
+		border-radius: 10px;
+		overflow: hidden;
+		transition: 0.3s ease;
 
-        h3 {
-            color: $primary;
-            font-size: 150%;
-            margin: 0;
-            margin-top: 25px;
-            margin-bottom: 1px;
-        }
+		h3 {
+			color: $primary;
+			font-size: 150%;
+			margin: 0;
+			margin-top: 25px;
+			margin-bottom: 1px;
+		}
 
-        p {
-            margin: 0;
-        }
+		p {
+			margin: 0;
+		}
 
-        div.dark{
-            display: none;
-        }
+		div.dark {
+			display: none;
+		}
 
-        &#youtube {
-            p {
-                font-size: 17px;
-            }
-            img {
-                margin-top: 15px;
-            }
-        }
+		&#youtube {
+			p {
+				font-size: 17px;
+			}
+			img {
+				margin-top: 15px;
+			}
+		}
+	}
 
-    }
+	li:hover {
+		background-color: $primary;
+		border-color: $secondary;
+		h3,
+		p {
+			color: black;
+		}
 
-    li:hover{
-        background-color: $primary;
-        border-color: $secondary;
-        h3, p {
-            color: black;
-        }
-
-        div.light{
-            display: none;
-        }
-        div.dark{
-            display: inherit;
-            float: left;
-        }
-    }
+		div.light {
+			display: none;
+		}
+		div.dark {
+			display: inherit;
+			float: left;
+		}
+	}
 }
 
-section{
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
+section {
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
 
-    div.form{
-        box-sizing: border-box;
-        height: auto;
-        width: 90%;
-        max-width: 500px;
-        margin: 0 auto;
-        background-color: #F2F3EF;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        border-radius: 20px;
-    
-        div.form-group{
-            width: 100%;
-            margin-top: 20px;
-            font-size: 20px;
-    
-            input,
-            textarea{
-                width: 100%;
-                padding: 5px;
-                font-size: 16px;  
-                border: 1px solid $secondary;
-                margin-top: 5px;
-                border-radius: 8px;
+	div.form {
+		box-sizing: border-box;
+		height: auto;
+		width: 90%;
+		max-width: 500px;
+		margin: 0 auto;
+		background-color: #f2f3ef;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 20px;
+		border-radius: 20px;
 
-                &:focus{
-                    outline: none !important;
-                    border: 1px solid black;
-                    box-shadow: 0 0 1px black;
-                    // outline-color: #719ECE;
-                }
-            }
-    
-            textarea {
-                font-family: "Roboto", sans-serif;
-                resize: vertical;
-            }
-    
-        }
-        
-        button[type=submit] {
-            background-color: $secondary;
-            width: 100%;
-            border: none;
-            outline: none;
-            padding: 10px;
-            font-size: 24px;
-            border-radius: 20px;
-            color: $primary;
-            text-align: center;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: .2s ease;
-    
-            &:hover {
-                background-color: darken($color: $primary, $amount: 10%);
-                color: $secondary;
-            }
-        }
-    }
-    
-    div[id=status] {
-        width: 90%;
-        max-width: 500px;
-        text-align: center;
-        padding: 10px;
-        margin: 0 auto 20px;
-        border-radius: 20px;
+		div.form-group {
+			width: 100%;
+			margin-top: 20px;
+			font-size: 20px;
 
-        &.success {
-            background-color: $primary;
-            font-weight: bold;
-            color: black;
-            animation: status 4s ease forwards;
-        }
-        &.error {
-            background-color: #ff5147;
-            color: white;
-            animation: status 4s ease forwards;
-        }
-    }
+			input,
+			textarea {
+				width: 100%;
+				padding: 5px;
+				font-size: 16px;
+				border: 1px solid $secondary;
+				margin-top: 5px;
+				border-radius: 8px;
 
-    @keyframes status {
-        0%{
-            opacity: 1;
-            pointer-events: all;
-        }
-        90%{
-            opacity: 1;
-            pointer-events: all;
-        }
-        100%{
-            opacity: 0;
-            pointer-events: none;
-        }
-    }
+				&:focus {
+					outline: none !important;
+					border: 1px solid black;
+					box-shadow: 0 0 1px black;
+					// outline-color: #719ECE;
+				}
+			}
+
+			textarea {
+				font-family: "Roboto", sans-serif;
+				resize: vertical;
+			}
+		}
+
+		button[type="submit"] {
+			background-color: $secondary;
+			width: 100%;
+			border: none;
+			outline: none;
+			padding: 10px;
+			font-size: 24px;
+			border-radius: 20px;
+			color: $primary;
+			text-align: center;
+			cursor: pointer;
+			margin-top: 20px;
+			transition: 0.2s ease;
+
+			&:hover {
+				background-color: darken($color: $primary, $amount: 10%);
+				color: $secondary;
+			}
+		}
+	}
+
+	div[id="status"] {
+		width: 90%;
+		max-width: 500px;
+		text-align: center;
+		padding: 10px;
+		margin: 0 auto 20px;
+		border-radius: 20px;
+
+		&.success {
+			background-color: $primary;
+			font-weight: bold;
+			color: black;
+			animation: status 4s ease forwards;
+		}
+		&.error {
+			background-color: #ff5147;
+			color: white;
+			animation: status 4s ease forwards;
+		}
+	}
+
+	@keyframes status {
+		0% {
+			opacity: 1;
+			pointer-events: all;
+		}
+		90% {
+			opacity: 1;
+			pointer-events: all;
+		}
+		100% {
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
 }
-
 
 // RESPONSIVE CODE ============================================
 
 @media screen and (max-width: 1300px) {
-    #mobilePageExtender {
-        display: inline;
-    }
+	#mobilePageExtender {
+		display: inline;
+	}
 }
 
-@media screen and (max-width: 350px){
-    ul li {
-        width: 120px;
-        height: auto;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        
-        div.col{
-            display: contents;
+@media screen and (max-width: 350px) {
+	ul li {
+		width: 120px;
+		height: auto;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
 
-            padding: 0px;
-            margin-left: auto;
-            margin-right: auto;
+		div.col {
+			display: contents;
 
-            img, p, h3 {
-                padding: 0;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                text-align: center;
-            }
-        }
-        
-        &#youtube {
-            p {
-                font-size: 18px;
-            }
-            img {
-                margin-top: 0px;
-            }
-        }
-    }
+			padding: 0px;
+			margin-left: auto;
+			margin-right: auto;
+
+			img,
+			p,
+			h3 {
+				padding: 0;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+			}
+		}
+
+		&#youtube {
+			p {
+				font-size: 18px;
+			}
+			img {
+				margin-top: 0px;
+			}
+		}
+	}
 }

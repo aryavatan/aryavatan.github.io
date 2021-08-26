@@ -27,7 +27,7 @@ export class AppComponent implements OnDestroy {
 
 			if (event instanceof NavigationEnd) {  // AFTER Navigation
 				this.enableActiveNavButton(true);
-				console.log('nav over')
+				// console.log('nav over')
 
 				if (this.scrollElement != null) {
 					this.scrollToElement(this.scrollElement);
@@ -77,7 +77,6 @@ export class AppComponent implements OnDestroy {
 	}
 
 	scrollToElement(id): void {
-		console.log(id);
 		let element = document.getElementById(id);
 
 		if (element) {
