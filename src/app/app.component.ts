@@ -1,5 +1,5 @@
-import { Component, OnDestroy, Inject } from '@angular/core';
-import { NavigationStart, Router, NavigationEnd, NavigationCancel } from '@angular/router';
+import { Component, OnDestroy, Inject, HostListener } from '@angular/core';
+import { NavigationStart, Router, NavigationEnd } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { DOCUMENT } from '@angular/common';
 
@@ -16,6 +16,7 @@ export class AppComponent implements OnDestroy {
 	subscription: Subscription;
 	sidenavWidth: any;
 	scrollElement: any;
+    topBtnClass = 'hide'
 
 	constructor(private router: Router, @Inject(DOCUMENT) document) {
 		this.subscription = router.events.subscribe((event) => {
@@ -87,4 +88,13 @@ export class AppComponent implements OnDestroy {
 		document.body.scrollTop = 0; // For Safari
 	}
 
+    // Called as the user scrolls
+    @HostListener('window:scroll', ['$event']) onScrollEvent($event){
+        if (window.scrollY > 150) {
+            this.topBtnClass = '';
+        }
+        else {
+            this.topBtnClass = 'hide';
+        }
+    }
 }
