@@ -22,22 +22,15 @@ export class AppComponent implements OnDestroy {
 			if (event instanceof NavigationStart) {  // START Navigation
 				browserRefresh = !router.navigated;
 				window.scrollTo(0, 0);
-				this.enableActiveNavButton(false);
 			}
 
 			if (event instanceof NavigationEnd) {  // AFTER Navigation
-				this.enableActiveNavButton(true);
 				// console.log('nav over')
 
 				if (this.scrollElement != null) {
 					this.scrollToElement(this.scrollElement);
 					this.scrollElement = null;
 				}
-			}
-
-			// Changing project filters causes the query params to change and this causes a NavigationCancel instead of NavigationEnd
-			if (event instanceof NavigationCancel && event.url.includes('projects')) {
-				this.enableActiveNavButton(true);
 			}
 		});
 	}
@@ -56,6 +49,7 @@ export class AppComponent implements OnDestroy {
 
 	// This method will enable the primary color of the nav buttons to indicate the active page
 	// Alternatively, it will disable the primary color of all nav buttons
+    /// OBSOLETE FUNCTION
 	enableActiveNavButton(enable) {
 		if (enable) {
 			let id = window.location.pathname.replace('/', '');

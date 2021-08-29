@@ -1,0 +1,46 @@
+@import "../app.component.scss";
+
+.top-padding {
+	padding-top: 90px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+		font-family: "Roboto Condensed", sans-serif;
+		color: white;
+		font-size: 175%;
+		margin-top: 15px;
+	}
+
+	span {
+		color: $primary;
+	}
+}
+
+.pdf {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 20px;
+}
+
+// RESPONSIVE CODE ============================================
+
+@media screen and (max-width: 1000px) {
+    .top-padding{
+        padding-top: 70px;
+    }
+
+    .pdf {
+        margin-top: 0;
+    }
+
+	.title h1 {
+        font-size: 150%;
+    }
+}
