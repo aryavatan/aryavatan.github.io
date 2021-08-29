@@ -27,7 +27,6 @@ export class AppComponent implements OnDestroy {
 
 			if (event instanceof NavigationEnd) {  // AFTER Navigation
 				// console.log('nav over')
-
 				if (this.scrollElement != null) {
 					this.scrollToElement(this.scrollElement);
 					this.scrollElement = null;
@@ -46,29 +45,6 @@ export class AppComponent implements OnDestroy {
 
 	closeNav() {
 		this.sidenavWidth = 0;
-	}
-
-	// This method will enable the primary color of the nav buttons to indicate the active page
-	// Alternatively, it will disable the primary color of all nav buttons
-    /// OBSOLETE FUNCTION
-	enableActiveNavButton(enable) {
-		if (enable) {
-			let id = window.location.pathname.replace('/', '');
-
-			// Edge cases:
-			id = id.includes('projects/') ? 'projects' : id;
-
-			let navButton = document.getElementById(id ? id : 'home');
-			if (!navButton) return;
-			navButton.setAttribute('class', 'selected');
-		}
-		else {
-			const idList = ['home', 'about', 'experience', 'projects', 'contact'];
-			idList.forEach((elementID) => {
-				let navButton = document.getElementById(elementID);
-				navButton.setAttribute('class', null);
-			});
-		}
 	}
 
 	scrollToElement(id): void {
