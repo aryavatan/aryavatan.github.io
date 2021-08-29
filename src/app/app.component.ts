@@ -28,7 +28,7 @@ export class AppComponent implements OnDestroy {
 			if (event instanceof NavigationEnd) {  // AFTER Navigation
 				// console.log('nav over')
 				if (this.scrollElement != null) {
-					this.scrollToElement(this.scrollElement);
+					this.scrollToElement(this.scrollElement, true);
 					this.scrollElement = null;
 				}
 			}
@@ -47,11 +47,15 @@ export class AppComponent implements OnDestroy {
 		this.sidenavWidth = 0;
 	}
 
-	scrollToElement(id): void {
+	async scrollToElement(id, delay = false) {
+        if (delay === true) {
+            await new Promise(f => setTimeout(f, 100))
+        }
+
 		let element = document.getElementById(id);
 
 		if (element) {
-			element.scrollIntoView({ behavior: "smooth", block: "center" });
+			element.scrollIntoView({ behavior: "smooth", block: "center", inline:'start' });
 		}
 		else {
 			this.scrollElement = id;
