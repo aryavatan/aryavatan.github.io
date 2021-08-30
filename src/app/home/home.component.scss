@@ -2,6 +2,9 @@
 
 #image {
 	height: 70%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
 }
 
 img {
@@ -60,6 +63,7 @@ div#text {
 	padding: 0;
 	display: flex;
 	flex-wrap: wrap;
+	max-width: 600px;
 
 	li {
 		background: $primary;
@@ -76,46 +80,6 @@ div#text {
 		height: auto;
 		color: black;
 		border-radius: 20px;
-	}
-}
-
-#shortcuts {
-	margin-top: 30px;
-	display: none;
-	width: auto;
-	max-width: 300px;
-	margin-left: auto;
-	margin-right: auto;
-
-	ul {
-		list-style: none;
-		padding: 0;
-
-		li {
-			width: auto;
-			max-width: 300px;
-			height: 45px;
-			font-family: "Roboto", sans-serif;
-			font-size: 20px;
-			border: 2px solid $primary;
-			margin: 0 0 15px 0;
-			text-align: center;
-			color: $primary;
-			transition: 0.2s;
-			display: grid;
-			align-items: center;
-
-			a {
-				color: inherit;
-				text-decoration: none;
-			}
-
-			&:hover {
-				background-color: $primary;
-				color: black;
-				font-weight: bold;
-			}
-		}
 	}
 }
 
@@ -216,8 +180,9 @@ div#text {
 		/* Create four equal columns that floats next to each other */
 		.column {
 			float: left;
-			width: 33%;
+			width: 20%;
 			display: inherit; // Sets project heights to be equal
+			justify-content: center;
 		}
 
 		/* Clear floats after rows */
@@ -236,6 +201,8 @@ div#text {
 			border-width: 2px;
 			border-color: $primary;
 			border-radius: 20px;
+
+			flex: 1;
 
 			a {
 				display: flex;
@@ -290,83 +257,101 @@ div#text {
 
 // MAX WIDTH: 2000px =========================================================
 @media screen and (max-width: 2000px) {
-	img {
-		margin-left: 10%;
-	}
-}
-
-// MAX WIDTH: 1600px =========================================================
-@media screen and (max-width: 1600px) {
-	// img {
-	// 	object-fit: cover;
-	// 	overflow: hidden;
-	// 	width: auto;
-	// 	height: auto;
-	// 	max-width: 90%;
-	// 	max-height: 90%;
-	// 	border-radius: 8px;
-	// 	margin-left: 5%;
-	// }
-
-	.box {
-		padding: 40px;
+	.games .main .column {
+		width: 31%;
 	}
 }
 
 // MAX WIDTH: 1500px =========================================================
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1530px) {
 	img {
 		margin: auto;
 	}
 	.box {
 		padding: 0px;
 	}
+	.games .main .column {
+		width: 33%;
+	}
 }
 
 // MAX WIDTH: 1300px =========================================================
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1330px) {
+	div#text h1,
+	#about-me h1,
+	#games h1,
+	.clearfix .box h1 {
+		font-size: 200%;
+	}
+	
+	
+	#image img {
+		width: 400px;
+		height: 515px;
+		object-position: center;
+	}
+	
 	#skills > ul {
-		margin-top: 1.4em;
 		li {
-			padding: 12px;
+			padding: 10px;
+			padding-left: 16px;
+			padding-right: 16px;
 		}
 	}
 }
 
 // MAX WIDTH: 1150px =========================================================
 @media screen and (max-width: 1150px) {
-	#shortcuts {
-		display: block;
+	#image img {
+		width: 375px;
+		height: 475px;
+		object-position: center;
 	}
+
 	#skills {
-		display: none;
-	}
-}
-
-// MAX WIDTH: 1130px =========================================================
-@media screen and (max-width: 1130px) {
-	#skills > ul > li {
-		padding: 12px;
-	}
-}
-
-// MAX WIDTH: 1100px =========================================================
-@media screen and (max-width: 1100px) {
-	.clearfix {
-		position: relative;
-	}
-	div#text {
-		h1 {
-			font-size: 225%;
-		}
+		width: 500px;
 	}
 	#skills > ul > li {
 		padding: 8px;
+		padding-left: 12px;
+		padding-right: 12px;
 		font-size: 16px;
 	}
-	#shortcuts > ul > li {
-		font-size: 18px;
-		height: 40px;
+}
+
+
+// MAX WIDTH: 1100px =========================================================
+@media screen and (max-width: 1100px) {
+	.about-me .text {
+		.fav-games,
+		p {
+			width: 80%;
+		}
+	}
+}
+@media screen and (max-width: 1062px) {
+	div#text {
+		h1 {
+			font-size: 175%;
+		}
+	}
+	#image {
+		img {
+			padding: 10px;
+			border-radius: 32px;
+		}
+	}
+}
+@media screen and (max-width: 1000px) {
+	#image {
+		img {
+			padding: 15px;
+			border-radius: 35px;
+		}
+	}
+
+	#skills {
+		width: auto;
 	}
 }
 
@@ -375,25 +360,39 @@ div#text {
 	div#text {
 		h1 {
 			font-size: 150%;
-			margin-top: 0;
-			margin-bottom: 5px;
 		}
 		p {
 			font-size: 16px;
-			margin: 0;
-			margin-bottom: 0;
 		}
 	}
 	#skills > ul {
 		margin-top: 30px;
-	}
-	#shortcuts {
-		// margin-top: 0;
-
-		ul > li {
-			height: 35px;
+		li {
+			font-size: 16px;
 		}
 	}
+}
+
+// MAX WIDTH: 800px =========================================================
+@media screen and (max-width: 800px) {
+	div#text {
+		h1 {
+			font-size: 125%;
+		}
+		p {
+			margin: 0;
+		}
+		#skills > ul {
+			margin-top: 15px;
+		}
+	}
+	#image {
+		img {
+			padding: 20px;
+			border-radius: 40px;
+		}
+	}
+
 }
 
 // MAX WIDTH: 725px =========================================================
@@ -401,32 +400,107 @@ div#text {
 	.box {
 		width: 100%;
 	}
-	img {
+	#image img {
 		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		object-fit: cover;
-		max-width: 100%;
-		max-height: 500px;
+		padding: 0;
+		width: 500px;
+		border-radius: 20px;
+		height: 500px;
+		object-position: 0 -130px;
 	}
 	div#text {
 		text-align: center;
+		margin-top: -120px;
+		
+		h1 {
+			font-size: 200%;
+			filter: drop-shadow(1px 1px 4px black);
+			// font-size: 160%;
+		}
 		p {
 			font-size: 17px;
+			margin-top: 20px;
+			margin-bottom: 20px;
 		}
 	}
 	#skills > ul {
 		align-items: center;
 		justify-content: center;
 		li {
-			padding: 16px;
+			padding: 12px;
+			padding-left: 18px;
+			padding-right: 18px;
+			font-size: 17px;
 		}
 	}
-	#shortcuts > ul > li {
-		font-size: 20px;
-		height: 50px;
+	#about-me,
+	#about-me h1 {
+		margin-top: 10px;
 	}
 	#extraSpace {
 		display: block;
 	}
+}
+
+// MAX WIDTH: 535px =========================================================
+@media screen and (max-width: 535px) {
+	#image img {
+		height: 450px;
+		object-position: 0 -100px;
+	}
+	#text.box {
+		margin-top: -190px;
+		text-align: left;
+		padding-left: 15px;
+		h1{
+			filter: drop-shadow(1px 1px 4px black);
+			font-size: 160%;
+			margin-top: 11px;
+			margin-bottom: 2px;
+		}
+	}
+	.about-me .text {
+		.fav-games,
+		p {
+			width: 100%;
+		}
+	}
+	#skills > ul {
+		li {
+			padding: 10px;
+			padding-left: 16px;
+			padding-right: 16px;
+		}
+	}
+}
+
+// MAX WIDTH: 430px =========================================================
+@media screen and (max-width: 430px) {
+	#image img {
+		object-position: 0 -30px;
+	}
+	#text.box {
+		margin-top: -170px;
+		text-align: left;
+		padding-left: 15px;
+		h1{
+			font-size: 140%;
+		}
+	}
+	.about-me .text {
+		.fav-games,
+		p {
+			width: 100%;
+		}
+	}
+}
+
+// MAX WIDTH: 370px =========================================================
+@media screen and (max-width: 370px) {
+	//  TODO
+	// 		Consider adding some default drop shadows to title/text elements
+	// 		Games need to be resized much earlier
+	//		Consider left aligning skills list item and Game Content text elements
+	//		Change AboutME and Games header font-sizes to match title
+	//		Main title renders above the nav bar/side-bar
 }

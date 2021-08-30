@@ -26,11 +26,11 @@
 
 		<div id="mySidenav" class="sidenav" [style.width]="sidenavWidth">
 			<a class="closebtn" (click)="closeNav()">&times;</a>
-			<a href="#" routerLink="/" (click)="closeNav()">Home</a>
-			<a href="#" routerLink="/about" (click)="closeNav()">About Me</a>
-			<a href="#" routerLink="/experience" (click)="closeNav()">Experience</a>
-			<a href="#" routerLink="/projects" (click)="closeNav()">Projects</a>
-			<a href="#" routerLink="/contact" (click)="closeNav()">Contact</a>
+            <a routerLink="/" (click)="topFunction(); closeNav()" id="home">Home</a>
+            <a routerLink="/" (click)="scrollToElement('about-me'); closeNav()" id="about">About Me</a>
+            <a routerLink="/" (click)="scrollToElement('games'); closeNav()" id="game">Games</a>
+            <a href="#" routerLink="/resume" id="resume" (click)="closeNav()">Resume</a>
+            <a href="#" routerLink="/contact" id="contact" (click)="closeNav()">Contact</a>
 		</div>
 
 		<hr>

@@ -39,17 +39,25 @@ export class ResumeComponent implements OnInit {
 
     // Updates the PDF size based on the screen size
     UpdatePDFSize() {
+        // Get screen width and height
         this.screenWidth = window.innerWidth;
         this.screenHeight = window.innerHeight;
 
+        // Calculate width factor of pdf
         let widthMargin = 0.5;
         if (this.screenWidth <= 1150) {
             widthMargin = 0.8;
         }
 
+        // Calculate width to height ration
         let heightRatio = 11/8.5;
 
-        this.pdfWidth = this.screenWidth * widthMargin;
+        // Set the PDF width (with ceiling of 800px)
+        let width = this.screenWidth * widthMargin;
+        if (width > 800) width = 800;
+        this.pdfWidth = width;
+
+        // Set the PDF height
         this.pdfHeight = this.pdfWidth * heightRatio;
     }
 
