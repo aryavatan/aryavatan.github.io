@@ -25,6 +25,7 @@ div#text {
 		font-size: 250%;
 		margin: 0;
 		margin-top: 15px;
+        text-shadow: 1px 1px 2px black;
 	}
 
 	span.title {
@@ -34,6 +35,7 @@ div#text {
 	p {
 		font-family: "Roboto Condensed", sans-serif;
 		color: darken(white, 50%);
+        text-shadow: 1px 1px 2px $darkgrey;
 	}
 }
 
@@ -94,6 +96,7 @@ div#text {
 		margin-top: 15px;
 		margin-bottom: 15px;
 
+        text-shadow: 1px 1px 2px black;
 		text-align: center;
 	}
 	span.title {
@@ -108,6 +111,7 @@ div#text {
 			width: 70%;
 			color: white;
 			text-align: start;
+            text-shadow: 1px 1px 2px black;
 
 			span {
 				color: $primary;
@@ -125,6 +129,7 @@ div#text {
 
 				li {
 					color: white;
+                    text-shadow: 1px 1px 2px black;
 				}
 				li::before {
 					content: "\25AA"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
@@ -150,6 +155,7 @@ div#text {
 		margin: 0;
 		margin-top: 15px;
 		margin-bottom: 15px;
+        text-shadow: 1px 1px 2px black;
 
 		text-align: center;
 	}
@@ -216,12 +222,14 @@ div#text {
 				color: $primary;
 				margin-bottom: 0;
 				font-size: 22px;
+                text-shadow: 1px 1px 2px $darkgrey;
 			}
 
 			p {
 				color: white;
 				margin-bottom: 5px;
 				align-self: flex-start;
+                text-shadow: 1px 1px 2px $darkgrey;
 			}
 
 			&:hover {
@@ -231,6 +239,7 @@ div#text {
 				p,
 				h3 {
 					color: black;
+                    text-shadow: none;
 				}
 			}
 			img {
@@ -329,6 +338,8 @@ div#text {
 		}
 	}
 }
+
+// MAX WIDTH: 1062px =========================================================
 @media screen and (max-width: 1062px) {
 	div#text {
 		h1 {
@@ -342,6 +353,8 @@ div#text {
 		}
 	}
 }
+
+// MAX WIDTH: 1000px =========================================================
 @media screen and (max-width: 1000px) {
 	#image {
 		img {
@@ -353,6 +366,9 @@ div#text {
 	#skills {
 		width: auto;
 	}
+    .games .main .row {
+        width: 100%;
+    }
 }
 
 // MAX WIDTH: 950px =========================================================
@@ -395,6 +411,13 @@ div#text {
 
 }
 
+// MAX WIDTH: 740px =========================================================
+@media screen and (max-width: 740px) {
+    .games .main .column {
+		width: 40%;
+	}
+}
+
 // MAX WIDTH: 725px =========================================================
 @media screen and (max-width: 725px) {
 	.box {
@@ -410,12 +433,13 @@ div#text {
 	}
 	div#text {
 		text-align: center;
-		margin-top: -120px;
+		margin-top: -230px;
 		
 		h1 {
 			font-size: 200%;
-			filter: drop-shadow(1px 1px 4px black);
-			// font-size: 160%;
+            // text-shadow: 1px 1px 2px black;
+            text-align: left;
+            padding-left: 40px;
 		}
 		p {
 			font-size: 17px;
@@ -442,6 +466,23 @@ div#text {
 	}
 }
 
+// MAX WIDTH: 660px =========================================================
+@media screen and (max-width: 660px) {
+    .games .main .column {
+		width: 50%;
+	}
+}
+
+// MAX WIDTH: 595px =========================================================
+@media screen and (max-width: 595px) {
+    #text.box {
+		h1{
+            padding-left: 30px;
+            font-size: 180%;
+		}
+	}
+}
+
 // MAX WIDTH: 535px =========================================================
 @media screen and (max-width: 535px) {
 	#image img {
@@ -453,10 +494,10 @@ div#text {
 		text-align: left;
 		padding-left: 15px;
 		h1{
-			filter: drop-shadow(1px 1px 4px black);
 			font-size: 160%;
 			margin-top: 11px;
 			margin-bottom: 2px;
+            padding-left: 0px;
 		}
 	}
 	.about-me .text {
@@ -466,11 +507,19 @@ div#text {
 		}
 	}
 	#skills > ul {
+        justify-content: start;
 		li {
 			padding: 10px;
 			padding-left: 16px;
 			padding-right: 16px;
 		}
+	}
+}
+
+// MAX WIDTH: 480px =========================================================
+@media screen and (max-width: 480px) {
+    .games .main .column {
+		width: 60%;
 	}
 }
 
@@ -495,12 +544,35 @@ div#text {
 	}
 }
 
+// MAX WIDTH: 405px =========================================================
+@media screen and (max-width: 405px) {
+    #skills ul li {
+        padding: 8px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .games .main .column {
+		width: 70%;
+	}
+}
+
 // MAX WIDTH: 370px =========================================================
 @media screen and (max-width: 370px) {
-	//  TODO
-	// 		Consider adding some default drop shadows to title/text elements
-	// 		Games need to be resized much earlier
-	//		Consider left aligning skills list item and Game Content text elements
-	//		Change AboutME and Games header font-sizes to match title
-	//		Main title renders above the nav bar/side-bar
+    #text.box {
+		margin-top: -150px;
+		padding-left: 8px;
+		h1{
+			font-size: 120%;
+		}
+	}
+    #image img {
+		object-position: 0 -50px;
+        height: 350px;
+	}
+    #skills ul {
+        justify-content: center;
+    }
+    .games .main .column {
+		width: 80%;
+	}
 }
