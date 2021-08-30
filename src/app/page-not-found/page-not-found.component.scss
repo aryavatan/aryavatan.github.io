@@ -1,18 +1,23 @@
-$primary: rgb(152, 230, 152);
-$secondary: rgb(29, 31, 32);
+@import "../app.component.scss";
 
 .content {
+    padding-top: 88px;
     text-align: center;
 }
 
 h1 {
     font-family: "Roboto Condensed", sans-serif;
-    color: $primary;
+    color: white;
     font-size: 250%;
     margin-top: 20px;
     margin-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 1px 1px 2px black;
+    
+    span {
+        color: $primary;
+    }
 }
 
 p {
@@ -22,6 +27,7 @@ p {
     width: auto;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 1px 1px 2px black;
 }
 
 a {
@@ -34,6 +40,7 @@ a {
 }
 
 iframe {
+    pointer-events: none;
     border: solid;
     border-color: $primary;
     border-width: 3px;
