@@ -24,9 +24,10 @@ export class AppComponent implements OnDestroy {
 				browserRefresh = !router.navigated;
 				window.scrollTo(0, 0);
 			}
-
+            
 			if (event instanceof NavigationEnd) {  // AFTER Navigation
 				// console.log('nav over')
+                window.scrollTo(0, 0);
 				if (this.scrollElement != null) {
 					this.scrollToElement(this.scrollElement, true);
 					this.scrollElement = null;
