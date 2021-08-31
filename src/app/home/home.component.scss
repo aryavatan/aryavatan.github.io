@@ -16,7 +16,7 @@ img {
 	border-radius: 20px;
 }
 
-div#text {
+#text.box {
 	margin-top: 1em;
 
 	h1 {
@@ -271,7 +271,7 @@ div#text {
 	}
 }
 
-// MAX WIDTH: 1500px =========================================================
+// MAX WIDTH: 1530px =========================================================
 @media screen and (max-width: 1530px) {
 	img {
 		margin: auto;
@@ -284,9 +284,9 @@ div#text {
 	}
 }
 
-// MAX WIDTH: 1300px =========================================================
-@media screen and (max-width: 1330px) {
-	div#text h1,
+// MAX WIDTH: 1395px =========================================================
+@media screen and (max-width: 1395px) {
+	#text.box h1,
 	#about-me h1,
 	#games h1,
 	.clearfix .box h1 {
@@ -328,6 +328,12 @@ div#text {
 	}
 }
 
+// MAX WIDTH: 1115px =========================================================
+@media screen and (max-width: 1115px) {
+    #text.box h1 {
+        font-size: 190%;
+    }
+}
 
 // MAX WIDTH: 1100px =========================================================
 @media screen and (max-width: 1100px) {
@@ -341,7 +347,7 @@ div#text {
 
 // MAX WIDTH: 1062px =========================================================
 @media screen and (max-width: 1062px) {
-	div#text {
+	#text.box {
 		h1 {
 			font-size: 175%;
 		}
@@ -371,9 +377,9 @@ div#text {
     }
 }
 
-// MAX WIDTH: 950px =========================================================
-@media screen and (max-width: 950px) {
-	div#text {
+// MAX WIDTH: 975px =========================================================
+@media screen and (max-width: 975px) {
+	#text.box {
 		h1 {
 			font-size: 150%;
 		}
@@ -389,9 +395,16 @@ div#text {
 	}
 }
 
+// MAX WIDTH: 840px =========================================================
+@media screen and (max-width: 840px) {
+    #text.box h1 {
+        font-size: 140%;
+    }
+}
+
 // MAX WIDTH: 800px =========================================================
 @media screen and (max-width: 800px) {
-	div#text {
+	#text.box {
 		h1 {
 			font-size: 125%;
 		}
@@ -431,7 +444,7 @@ div#text {
 		height: 500px;
 		object-position: 0 -130px;
 	}
-	div#text {
+	#text.box {
 		text-align: center;
 		margin-top: -230px;
 		
@@ -473,8 +486,8 @@ div#text {
 	}
 }
 
-// MAX WIDTH: 595px =========================================================
-@media screen and (max-width: 595px) {
+// MAX WIDTH: 610px =========================================================
+@media screen and (max-width: 610px) {
     #text.box {
 		h1{
             padding-left: 30px;
@@ -483,8 +496,8 @@ div#text {
 	}
 }
 
-// MAX WIDTH: 535px =========================================================
-@media screen and (max-width: 535px) {
+// MAX WIDTH: 540px =========================================================
+@media screen and (max-width: 540px) {
 	#image img {
 		height: 450px;
 		object-position: 0 -100px;
@@ -523,8 +536,16 @@ div#text {
 	}
 }
 
-// MAX WIDTH: 430px =========================================================
-@media screen and (max-width: 430px) {
+
+// MAX WIDTH: 465px =========================================================
+@media screen and (max-width: 465px) {
+	#text.box h1 {
+        font-size: 155%;
+    }
+}
+
+// MAX WIDTH: 440px =========================================================
+@media screen and (max-width: 440px) {
 	#image img {
 		object-position: 0 -30px;
 	}
@@ -556,8 +577,8 @@ div#text {
 	}
 }
 
-// MAX WIDTH: 370px =========================================================
-@media screen and (max-width: 370px) {
+// MAX WIDTH: 385px =========================================================
+@media screen and (max-width: 385px) {
     #text.box {
 		margin-top: -150px;
 		padding-left: 8px;
@@ -575,4 +596,14 @@ div#text {
     .games .main .column {
 		width: 80%;
 	}
+}
+
+// MAX WIDTH: 325px =========================================================
+@media screen and (max-width: 325px) {
+    #text.box {
+        padding-left: 5px;
+        h1 {
+            font-size: 110%;
+        }
+    }
 }
