@@ -55,7 +55,7 @@
 	<div class="main">
 		<div *ngIf="games" class="row">
 			<div *ngFor="let game of games" id="{{game.id}}" class="column">
-				<div class="content" (click)="projectClicked(project)">
+				<div class="content">
 					<a href={{game.link}} target="_blank">
 						<img src="{{game.icon}}" alt="{{game.name}}" style="width:100%">
 						<h3>{{game.name}}</h3>
