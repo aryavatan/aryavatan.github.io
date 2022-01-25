@@ -14,7 +14,7 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The app 
 
 3. Additionally make sure there is a file named `CNAME` in the `docs` folder which contain only one line: `aryavatan.ca`
 
-4. Make sure there is a '.nojekyll' file in the 'docs' folder
+4. Make sure there is a `.nojekyll` file in the 'docs' folder
 
 ## Live Site
 
